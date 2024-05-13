@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>C# Cheat Sheet v4.5</title>
+    <title>C# Cheat Sheet v4.6</title>
     <style>
 
 :root {
@@ -138,25 +138,41 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           <ul>
             <li><a href="#variablescope">Variable Scope</a></li>
             <li><a href="#combinestrings">Combine strings and output to console</a></li>
-            <li><a href="#getstring">Get a string from the user</a></li>
-            <li><a href="#getint">Get an integer from the user</a></li>
-            <li><a href="#getdouble">Get a double from the user</a></li>
             <li><a href="#compstrings">Compare strings (if statements)</a></li>
             <li><a href="#compnums">Compare numbers (if statements)</a></li>
-            <li><a href="#maths">Maths with Numbers</a></li>
+            <li><a href="#maths">Simple Maths</a></li>
             <li><a href="#simplefunction">Simple functions</a></li>
             <li><a href="#forloop">For loop (counted loop)</a></li>
             <li><a href="#whileloop">While loop (uncounted loop)</a></li>
             <li><a href="#array">Declare/Initialise an Array</a></li>
             <li><a href="#arrayvalues">Assigning Values to Array Elements</a></li>
             <li><a href="#arrayaccess">Accessing Array Elements</a></li>
-            <li><a href="#menuexample">An example console menu</a></li>
             <li><a href="#consolechecknum">Simple number validation</a></li>
             <li><a href="#trycatchblock">Try/Catch Block</a></li>
-            <li><a href="#datetostring">Date To String (Timestamps)</a></li>
           </ul>
         </div>
       </div>
+	  <div>
+        <span>+ Console Input</span>
+		<div class="collapse">
+          <ul>
+		    <li><a href="#getstring">Get a string from the user</a></li>
+            <li><a href="#getint">Get an integer from the user</a></li>
+            <li><a href="#getdouble">Get a double from the user</a></li>
+		  </ul>
+		</div>
+	  </div>
+	  <div>
+        <span>+ Validation</span>
+		<div class="collapse">
+          <ul>
+		    <li><a href="#validstringempty">If string is empty</a></li>
+            <li><a href="#validstringnum">If string is number</a></li>
+            <li><a href="#validnuminrange">If number is in a range</a></li>
+			<li><a href="#validstringsequal">If 2 strings are the same</a></li>
+		  </ul>
+		</div>
+	  </div>
       <div>
         <span>+ Files</span>
         <div class="collapse">
@@ -174,7 +190,17 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <div class="collapse">
           <ul>
             <li><a href="#roundingdoubles">Maths: Rounding</a></li>
-            <li><a href="#randomnumbers">Maths: Random Numbers</a></li>
+          </ul>
+        </div>
+      </div>
+	  <div>
+        <span>+ Random</span>
+        <div class="collapse">
+          <ul>
+		    <li><a href="#randomnumbers">Random Numbers</a></li>
+            <li><a href="#randomcointoss">Random: Coin Toss</a></li>
+            <li><a href="#randomdice">Random: Roll x-sided Dice</a></li>
+			<li><a href="#randompercent">Random: % Success Chance</a></li>
           </ul>
         </div>
       </div>
@@ -211,9 +237,9 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ Other</span>
         <div class="collapse">
           <ul>
-            <li>
-              <a href="#intdoctemplates">Internal Documentation Templates</a>
-            </li>
+            <li><a href="#intdoctemplates">Internal Documentation Templates</a></li>
+            <li><a href="#menuexample">An example console menu</a></li>
+			<li><a href="#datetostring">Date To String (Timestamps)</a></li>
           </ul>
         </div>
       </div>
@@ -230,7 +256,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </span>
       </div>
 
-      <h3>Version: 4.5 --- Last Edited: 14-12-2023</h3>
+      <h3>Version: 4.6 --- Last Edited: 13-05-2024</h3>
       <p>Forgotten how to do something? Look it up in here!</p>
       <br>
 
@@ -283,56 +309,6 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 	My name is: Bob
         </b></code></pre>
       </div>
-      <br>
-
-      <a id="getstring"><h3>Get a string from the user</h3></a>
-      <div class="code-section">
-        <button class="copy-button">Copy</button>
-        <pre><code>
-	Console.Write("What is your name? ");
-	string strName = Console.ReadLine();
-      
-	Console.WriteLine("Your name is " + strName);
-      </code></pre>
-      </div>
-      <div class="code-section">
-        <pre><code class="nohighlight"><b>
-	Output:
-          
-	What is your name? <i>Bob</i>
-	Your name is Bob
-        </b></code></pre>
-      </div>
-      <br>
-
-      <a id="getint"><h3>Get an integer from the user</h3></a>
-      <div class="code-section">
-        <button class="copy-button">Copy</button>
-        <pre><code>
-	Console.Write("Enter number one: ");
-	int intNum = -999; // error value
-	while (!int.TryParse(Console.ReadLine(), out intNum))
-	{
-		Console.Write("The value must be an integer, try again: ");
-	}
-      </code></pre>
-      </div>
-      <p>Copy and paste but change intSumA to be a more suitable variable name.</p>
-      <br>
-
-      <a id="getdouble"><h3>Get a double from the user</h3></a>
-      <div class="code-section">
-        <button class="copy-button">Copy</button>
-        <pre><code>
-	Console.Write("Enter number one: ");
-	double dblNum = -999; // error value
-	while (!double.TryParse(Console.ReadLine(), out dblNum))
-	{
-		Console.Write("The value must be a double, try again: ");
-	}
-      </code></pre>
-      </div>
-      <p>Copy and paste but change dblNumA to be a more suitable variable name.</p>
       <br>
 
       <a id="compstrings"><h3>Compare strings (if statements)</h3></a>
@@ -390,7 +366,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </div>
       <br>
 
-      <a id="maths"><h3>Maths with numbers</h3></a>
+      <a id="maths"><h3>Simple Maths</h3></a>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
@@ -550,7 +526,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <a id="arrayvalues"><h3>Assigning Values to Array Elements</h3></a>
       <p>
         You can assign values to individual array elements, by using the index
-        number like -
+        number like :
       </p>
       <div class="code-section">
         <button class="copy-button">Copy</button>
@@ -560,8 +536,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p>
-        You can assign values to the array at the time of declaration, as shown
-        ?
+        You can assign values to the array at the time of declaration, as shown :
       </p>
       <div class="code-section">
         <button class="copy-button">Copy</button>
@@ -569,7 +544,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 	double[] balance = { 2340.0, 4523.69, 3421.0};
       </code></pre>
       </div>
-      <p>You can also create and initialise an array, as shown -</p>
+      <p>You can also create and initialise an array, as shown :</p>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
@@ -582,7 +557,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <p>
         An element is accessed by indexing the array name. This is done by
         placing the index of the element within square brackets after the name
-        of the array. For example,
+        of the array. For example:
       </p>
       <div class="code-section">
         <button class="copy-button">Copy</button>
@@ -592,7 +567,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </div>
       <p>
         The following example, demonstrates the above-mentioned concepts of
-        declaration, assignment, and accessing arrays ?
+        declaration, assignment, and accessing arrays :
       </p>
       <div class="code-section">
         <button class="copy-button">Copy</button>
@@ -627,48 +602,6 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           Element[8] = 108
           Element[9] = 109		
         </b></code></pre>
-      </div>
-      <br>
-
-      <a id="menuexample"><h3>An example console menu</h3></a>
-      <div class="code-section">
-        <button class="copy-button">Copy</button>
-        <pre><code>
-	// We will use this boolean variable to control the menu
-	//while booMenu is true it will keep returning to the menu
-	bool booMenu = true;
-
-	while(booMenu == true)
-	{
-		// Display a menu
-		Console.WriteLine("1) Safely get an integer from the user\n2) Loop Example\nQ) Quit");
-		Console.Write("Type 1, 2 or Q: ");
-
-		// Get the input from the user
-		string strInput = Console.ReadLine();
-
-		// This if block is the menu
-		if(strInput.Equals("1"))
-		{
-			ParseIntExample();
-			Console.WriteLine("\n");
-		}
-		else if(strInput.Equals("2"))
-		{
-			LoopExample(10);
-			Console.WriteLine("\n");
-		}
-		else if(strInput.Equals("Q"))
-		{
-			booMenu = false;
-		}
-		else
-		{
-			Console.WriteLine("Invalid option");
-			Console.WriteLine("\n");
-		}
-	}
-      </code></pre>
       </div>
       <br>
 
@@ -731,22 +664,135 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <br>
-
-      <a id="datetostring"><h3>Date To String (Timestamps)</h3></a>
+	  
+	  <a id="getstring"><h3>Get a string from the user</h3></a>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	DateTime dt = DateTime.Now;
-	string strOut = dt.ToString("G");
-	Console.WriteLine(strOut);
+	Console.Write("What is your name? ");
+	string strName = Console.ReadLine();
+      
+	Console.WriteLine("Your name is " + strName);
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output (depending on time of course):
+	Output:
           
-          12/03/2019 9:43:22 AM
+	What is your name? <i>Bob</i>
+	Your name is Bob
         </b></code></pre>
+      </div>
+      <br>
+
+      <a id="getint"><h3>Get an integer from the user</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	Console.Write("Enter number one: ");
+	int intNum = -999; // error value
+	while (!int.TryParse(Console.ReadLine(), out intNum))
+	{
+		Console.Write("The value must be an integer, try again: ");
+	}
+      </code></pre>
+      </div>
+      <p>Copy and paste but change intSumA to be a more suitable variable name and change the question in the first line.</p>
+      <br>
+
+      <a id="getdouble"><h3>Get a double from the user</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	Console.Write("Enter number one: ");
+	double dblNum = -999; // error value
+	while (!double.TryParse(Console.ReadLine(), out dblNum))
+	{
+		Console.Write("The value must be a double, try again: ");
+	}
+      </code></pre>
+      </div>
+      <p>Copy and paste but change dblNumA to be a more suitable variable name and change the question in the first line.</p>
+      <br>
+	  
+	  <a id="validstringempty"><h3>If string is empty</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	public bool isStringEmpty(string strIn)
+        {
+            bool booValid = false;
+            if (strIn.Equals("") || strIn.Equals(string.Empty))
+            {
+                booValid = true;
+            }
+
+            return booValid;
+
+            // Example use:
+            //if(valCheck.isStringEmpty(strName))
+            //    {
+            //        lblDebug.Content = "Name cannot be empty!";
+            //    }
+        }
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="validstringnum"><h3>If string is number</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	public bool isStringNumericInteger(string strIn)
+        {
+			// Validation function that checks if a string can be converted to an integer
+            int intRetVal = -999;
+            bool booValid = int.TryParse(strIn, out intRetVal);
+            // If this fails to convert properly, intRetVal will = 0 and booValid will = false
+            return booValid;
+        }
+	
+	public bool isStringNumericDouble(string strIn)
+        {
+			// Validation function that checks if a string can be converted to a double
+            double dblRetVal = -999;
+            bool booValid = double.TryParse(strIn, out dblRetVal);
+            // If this fails to convert properly, intRetVal will = 0 and booValid will = false
+            return booValid;
+        }
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="validnuminrange"><h3>If number is in a range</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	public bool isIntNumberInRange(int intIn, int intMin, int intMax)
+        {
+            bool booNumInRange = true;
+            // With this logic, we accept the number (don't turn booNumInRange to false) if it is between intMin-intMax inclusive.
+            if (intIn < intMin || intIn > intMax)
+            {
+                booNumInRange = false;
+            }
+
+            return booNumInRange;
+        }
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="validstringsequal"><h3>If 2 strings are the same</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	public bool isStringAndStringEqual(string strOne, string strTwo)
+        {
+            bool booValid = string.Equals(strOne, strTwo);
+            return booValid;
+        }
+      </code></pre>
       </div>
       <br>
 
@@ -946,7 +992,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </div>
       <br>
 
-      <a id="randomnumbers"><h3>Math: Random Numbers</h3></a>
+      <a id="randomnumbers"><h3>Random Numbers</h3></a>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
@@ -960,6 +1006,68 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 	Console.WriteLine(randGen.Next(intMin, intMax));
 	Console.WriteLine(randGen.Next(intMin, intMax));
 	Console.WriteLine(randGen.Next(intMin, intMax));
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="randomcointoss"><h3>Random: Coin Toss</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	// Tosses a coin and decides if you won the coin toss or not
+	public bool CoinToss()
+		{
+			int intResult = RollDie(1, 2);
+
+			if (intResult == 1)
+			{
+				// won coin toss
+				return true;
+			}
+			else
+			{
+				// lost coin toss
+				return false;
+			}
+		}
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="randomdice"><h3>Random: Roll x-sided Dice</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	// Customisable dice roll, ie: d6 use intMax as 6
+	public int RollNormalDie(int intMax)
+        {
+            intMax++; // needs to be one more because of weird way random.Next works
+            return rngGen.Next(1, intMax);
+        }
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="randompercent"><h3>Random: % Success Chance</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	// Purpose: Determines if something with x% succeeds.
+	public bool SuccessPercent(int intPercentageChance)
+		{
+			int intResult = RollDie(1, 100);
+
+			if (intResult <= intPercentageChance)
+			{
+				// success
+				return true;
+			}
+			else
+			{
+				// fail
+				return false;
+			}
+		}
       </code></pre>
       </div>
       <br>
@@ -1235,28 +1343,30 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// https://wpf-tutorial.com/dialogs/the-openfiledialog/
-
 	// You will need at the top of your file:
 	// using Microsoft.Win32;
 	// using System.IO;
+	public string OpenFileBrowser(string strFilter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
+	string strInitialDirectory = "Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)")
+        {
+            // https://wpf-tutorial.com/dialogs/the-openfiledialog/
+            string strRetVal = "error"; // if this value is returned, an error has occured!
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = strFilter;
+            openFileDialog.InitialDirectory = strInitialDirectory;
 
-	// Load a file with a dialog (GUI file picker)
-	OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                // if it is true we will return the file name
+                strRetVal = openFileDialog.FileName;
+            }
+            else
+            {
+                strRetVal = "No file has been selected";
+            }
 
-	// User can choose between .txt or any sort of file, change this to suit your needs
-	openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-
-	// Set the starting directory to be the root of the program
-	// For my documents use:
-	// openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-	openFileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
-
-	if (openFileDialog.ShowDialog() == true)
-	{
-		string strFileName = openFileDialog.FileName;
-		// your reading code here
-	}
+            return strRetVal;
+        }
       </code></pre>
       </div>
       <br>
@@ -1265,28 +1375,31 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// https://wpf-tutorial.com/dialogs/the-savefiledialog/
-
 	// You will need at the top of your file:
 	// using Microsoft.Win32;
 	// using System.IO;
+	public string SaveFileBrowser(string strFileName, string strFilter = "Text files (*.txt)|*.txt",
+	bool booAddExtension = true, string strTitle = "Save As", string strInitialDirectory = "AppDomain.CurrentDomain.BaseDirectory")
+        {
+            // https://www.wpf-tutorial.com/dialogs/the-savefiledialog/
 
-	// Save a file with a dialog (GUI file picker)
-	SaveFileDialog saveFileDialog = new SaveFileDialog();
+            string strRetVal = "SaveFileBrowser() error"; // if this value is returned, an error has occured!
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-	// User can choose .txt files change this to suit your needs
-	saveFileDialog.Filter = "Text file (*.txt)|*.txt";
+            // configure the Save File Dialog
+            saveFileDialog.Filter = strFilter;
+            saveFileDialog.InitialDirectory = strInitialDirectory;
+            saveFileDialog.AddExtension = booAddExtension;
+            saveFileDialog.Title = strTitle;
+            saveFileDialog.FileName = strFileName;
 
-	// Set the starting directory to be the root of the program
-	// For my documents use:
-	// saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-	saveFileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                strRetVal = saveFileDialog.FileName;
+            }
 
-	if (saveFileDialog.ShowDialog() == true)
-	{
-		string strFileName = saveFileDialog.FileName;
-		// your file saving code here
-	}
+            return strRetVal;
+        }
       </code></pre>
       </div>
       <br>
@@ -1321,6 +1434,67 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <br>
+	  
+	  <a id="menuexample"><h3>An example console menu</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	// We will use this boolean variable to control the menu
+	//while booMenu is true it will keep returning to the menu
+	bool booMenu = true;
+
+	while(booMenu == true)
+	{
+		// Display a menu
+		Console.WriteLine("1) Safely get an integer from the user\n2) Loop Example\nQ) Quit");
+		Console.Write("Type 1, 2 or Q: ");
+
+		// Get the input from the user
+		string strInput = Console.ReadLine();
+
+		// This if block is the menu
+		if(strInput.Equals("1"))
+		{
+			ParseIntExample();
+			Console.WriteLine("\n");
+		}
+		else if(strInput.Equals("2"))
+		{
+			LoopExample(10);
+			Console.WriteLine("\n");
+		}
+		else if(strInput.Equals("Q"))
+		{
+			booMenu = false;
+		}
+		else
+		{
+			Console.WriteLine("Invalid option");
+			Console.WriteLine("\n");
+		}
+	}
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="datetostring"><h3>Date To String (Timestamps)</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	DateTime dt = DateTime.Now;
+	string strOut = dt.ToString("G");
+	Console.WriteLine(strOut);
+      </code></pre>
+      </div>
+      <div class="code-section">
+        <pre><code class="nohighlight"><b>
+          Output (depending on time of course):
+          
+          12/03/2019 9:43:22 AM
+        </b></code></pre>
+      </div>
+      <br>
+	  
     </div>
 	<script>
   /*!
