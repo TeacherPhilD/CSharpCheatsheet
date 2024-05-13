@@ -190,6 +190,9 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <div class="collapse">
           <ul>
             <li><a href="#roundingdoubles">Maths: Rounding</a></li>
+			<li><a href="#mathspower">Maths: Power</a></li>
+			<li><a href="#mathssqrt">Maths: Square Root</a></li>
+			<li><a href="#mathsmaxmin">Maths: Max/Min</a></li>
           </ul>
         </div>
       </div>
@@ -988,6 +991,73 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           
           3
           3.142
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="mathspower"><h3>Maths: Power</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	double dblOne = 3;
+	double dblTwo = 2;
+
+    Console.WriteLine("3^2 = " + Math.Pow(dblOne,dblTwo));
+      </code></pre>
+      </div>
+      <div class="code-section">
+        <pre><code class="nohighlight"><b>
+          Output:
+          
+          3^2 = 9
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="mathssqrt"><h3>Maths: Square Root</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	// Negative numbers will return NaN (which means "not a number").
+	// NaN will return NaN.
+
+	double dblResult = Math.Sqrt(9);
+
+	Console.WriteLine("Square Root of 9: " + dblResult);
+      </code></pre>
+      </div>
+      <div class="code-section">
+        <pre><code class="nohighlight"><b>
+          Output:
+          
+          Square Root of 9: 3
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="mathsmaxmin"><h3>Maths: Max/Min</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	// Math.Max(number1, number2) returns the greater value from number1 and number2.
+
+	// Math.Min(number1, number2) returns the smaller value from number1 and number2.
+
+	int intSmall = -256;
+	int intBig = 128;
+
+	int intMaxResult = Math.Max(intSmall, intBig);
+	int intMinResult = Math.Min(intSmall, intBig);
+
+	Console.WriteLine($"Max: {intMaxResult}\nMin: {intMinResult}");
+      </code></pre>
+      </div>
+      <div class="code-section">
+        <pre><code class="nohighlight"><b>
+		Output:
+          
+		Max: 128
+		Min: -256
         </b></code></pre>
       </div>
       <br>
