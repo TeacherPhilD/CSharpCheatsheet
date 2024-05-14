@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>C# Cheat Sheet v4.7</title>
+    <title>C# Cheat Sheet v1.0-RC1</title>
     <style>
 
 :root {
@@ -263,7 +263,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </span>
       </div>
 
-      <h3>Version: 4.7 --- Last Edited: 14-05-2024</h3>
+      <h3>v1.0-RC1 --- Last Edited: 15-05-2024</h3>
       <p>Forgotten how to do something? Look it up in here!</p>
       <br>
 	  
@@ -322,27 +322,27 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-    // variables
-    string strFirstName = "Bob";
-    string strFamilyName = "Bobbington";
+      // variables
+      string strFirstName = "Bob";
+      string strFamilyName = "Bobbington";
 
-    // method one
-    Console.WriteLine("Your name is " + strFirstName + " " + strFamilyName);
+      // method one
+      Console.WriteLine("Your name is " + strFirstName + " " + strFamilyName);
 
-    // method two
-    Console.WriteLine("Your name is {0} {1}", strFirstName, strFamilyName);
+      // method two
+      Console.WriteLine("Your name is {0} {1}", strFirstName, strFamilyName);
 
-    // method three
-    Console.WriteLine($"Your name is {strFirstName} {strFamilyName}");
+      // method three
+      Console.WriteLine($"Your name is {strFirstName} {strFamilyName}");
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-    Output:
+      Output:
           
-    Your name is Bob Bobbington
-    Your name is Bob Bobbington
-    Your name is Bob Bobbington
+      Your name is Bob Bobbington
+      Your name is Bob Bobbington
+      Your name is Bob Bobbington
         </b></code></pre>
       </div>
       <br>
@@ -351,23 +351,23 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	string strName = "Bob";
+      string strName = "Bob";
       
-	if (strName.Equals("Awesome"))
-	{
-		Console.WriteLine("You are awesome!!");
-	}
-	else
-	{
-		Console.WriteLine("Sorry...");
-	}
+      if (strName.Equals("Awesome"))
+      {
+        Console.WriteLine("You are awesome!!");
+      }
+      else
+      {
+        Console.WriteLine("Sorry...");
+      }
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output:
+      Output:
           
-          Sorry...
+      Sorry...
         </b></code></pre>
       </div>
       <br>
@@ -376,28 +376,28 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	int intNumA = 10;
-	int intNumB = 11;
+      int intNumA = 10;
+      int intNumB = 11;
       
-	if (intNumA == intNumB)
-	{
-		Console.WriteLine("The numbers are the same");
-	}
-	else if (intNumA &lt; intNumB)
-	{
-		Console.WriteLine(intNumA + " is less than " + intNumB);
-	}
-	else if (intNumA > intNumB)
-	{
-		Console.WriteLine(intNumA + " is more than " + intNumB);
-	}
+      if (intNumA == intNumB)
+      {
+        Console.WriteLine("The numbers are the same");
+      }
+      else if (intNumA &lt; intNumB)
+      {
+        Console.WriteLine(intNumA + " is less than " + intNumB);
+      }
+      else if (intNumA > intNumB)
+      {
+        Console.WriteLine(intNumA + " is more than " + intNumB);
+      }
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output:
+      Output:
           
-          10 is less than 11
+      10 is less than 11
         </b></code></pre>
       </div>
       <br>
@@ -406,43 +406,43 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Switch statements
-	Console.WriteLine("Select beverage:\n1) Coffee\n2) Tea\n3) Soft Drink");
-	Console.Write("Type 1, 2 or 3: ");
-	string strMenuSelection = Console.ReadLine();
-	switch (strMenuSelection)
-	{
-		// based on their selection, switch between these cases
-		case "1":
-			// code for selection
-			Console.WriteLine("Pouring Coffee");
-			break;
-		case "2":
-			// code for selection
-			Console.WriteLine("Pouring Tea");
-			break;
-		case "3":
-			// code for selection
-			Console.WriteLine("Pouring Mountain Dew");
-			break;
-		default:
-			// default behaviour
-			// Sometimes used for errors
-			Console.WriteLine("Pouring Water");
-			break;
-	}
+      // Switch statements
+      Console.WriteLine("Select beverage:\n1) Coffee\n2) Tea\n3) Soft Drink");
+      Console.Write("Type 1, 2 or 3: ");
+      string strMenuSelection = Console.ReadLine();
+      switch (strMenuSelection)
+      {
+        // based on their selection, switch between these cases
+        case "1":
+          // code for selection
+          Console.WriteLine("Pouring Coffee");
+          break;
+        case "2":
+          // code for selection
+          Console.WriteLine("Pouring Tea");
+          break;
+        case "3":
+          // code for selection
+          Console.WriteLine("Pouring Mountain Dew");
+          break;
+        default:
+          // default behaviour
+          // Sometimes used for errors
+          Console.WriteLine("Pouring Water");
+          break;
+      }
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-	Output:
+      Output:
 	
-	Select beverage:
-	1) Coffee
-	2) Tea
-	3) Soft Drink
-	Type 1, 2 or 3: 2
-	Pouring Tea
+      Select beverage:
+      1) Coffee
+      2) Tea
+      3) Soft Drink
+      Type 1, 2 or 3: 2
+      Pouring Tea
         </b></code></pre>
       </div>
       <br>
@@ -451,35 +451,33 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	int intNumA = 3;
-	int intNumB = 4;
+      int intNumA = 3;
+      int intNumB = 4;
       
-	int intPlusResult = intNumA + intNumB;
-	Console.WriteLine("Result: " + intPlusResult);
+      int intPlusResult = intNumA + intNumB;
+      Console.WriteLine("Result: " + intPlusResult);     
       
+      int intMinusResult = intNumA - intNumB;
+      Console.WriteLine("Result: " + intMinusResult);     
       
-	int intMinusResult = intNumA - intNumB;
-	Console.WriteLine("Result: " + intMinusResult);
+      int intMultiplyResult = intNumA * intNumB;
+      Console.WriteLine("Result: " + intMultiplyResult);
       
+      // C# is a strongly typed language, convert your integers to doubles before dividing
+      // Otherwise you wont get the result you are expecting!
       
-	int intMultiplyResult = intNumA * intNumB;
-	Console.WriteLine("Result: " + intMultiplyResult);
-      
-	// C# is a strongly typed language, convert your integers to doubles before dividing
-	// Otherwise you wont get the result you are expecting!
-      
-	double dblDivideResult = (double)intNumA / (double)intNumB;
-	Console.WriteLine("Result: " + dblDivideResult);
+      double dblDivideResult = (double)intNumA / (double)intNumB;
+      Console.WriteLine("Result: " + dblDivideResult);
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output:
+      Output:
           
-          Result: 7
-          Result: -1
-          Result: 12
-          Result: 0.75
+      Result: 7
+      Result: -1
+      Result: 12
+      Result: 0.75
         </b></code></pre>
       </div>
       <br>
@@ -488,27 +486,27 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	static void Main(string[] args)
-	{
-		int intSumA = 10;
-		int intSumB = 20;
-		int intTotal = CalcTwoNum(intSumA, intSumB);
+      static void Main(string[] args)
+      {
+        int intSumA = 10;
+        int intSumB = 20;
+        int intTotal = CalcTwoNum(intSumA, intSumB);
 
-		Console.WriteLine("Total: " + intTotal);
-	}
+        Console.WriteLine("Total: " + intTotal);
+      }
 
-	private static int CalcTwoNum(int intSumA, int intSumB)
-	{
-		int intRetVal = intSumA + intSumB;
-		return intRetVal;
-	}
+      private static int CalcTwoNum(int intSumA, int intSumB)
+      {
+        int intRetVal = intSumA + intSumB;
+        return intRetVal;
+      }
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output:
+      Output:
           
-          Total: 30
+      Total: 30
         </b></code></pre>
       </div>
       <br>
@@ -517,26 +515,26 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	for (int i = 0; i &lt; 10; i++)
-	{
-		int intTemp = i * 2;
-		Console.WriteLine("i = " + i + " and intTemp = " + intTemp);
-	}
+      for (int i = 0; i &lt; 10; i++)
+      {
+        int intTemp = i * 2;
+        Console.WriteLine("i = " + i + " and intTemp = " + intTemp);
+      }
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output:
-          i = 0 and intTemp = 0
-          i = 1 and intTemp = 2
-          i = 2 and intTemp = 4
-          i = 3 and intTemp = 6
-          i = 4 and intTemp = 8
-          i = 5 and intTemp = 10
-          i = 6 and intTemp = 12
-          i = 7 and intTemp = 14
-          i = 8 and intTemp = 16
-          i = 9 and intTemp = 18
+      Output:
+      i = 0 and intTemp = 0
+      i = 1 and intTemp = 2
+      i = 2 and intTemp = 4
+      i = 3 and intTemp = 6
+      i = 4 and intTemp = 8
+      i = 5 and intTemp = 10
+      i = 6 and intTemp = 12
+      i = 7 and intTemp = 14
+      i = 8 and intTemp = 16
+      i = 9 and intTemp = 18
         </b></code></pre>
       </div>
       <br>
@@ -545,22 +543,22 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	int intNum = 0;
-	while(intNum &lt; 10)
-	{
-		intNum = intNum + 1;
-		intNum = intNum * 2;
-		Console.WriteLine("intNum = " + intNum);
-	}
+      int intNum = 0;
+      while(intNum &lt; 10)
+      {
+        intNum = intNum + 1;
+        intNum = intNum * 2;
+        Console.WriteLine("intNum = " + intNum);
+      }
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-	Output:
+      Output:
           
-	intNum = 2
-	intNum = 6
-	intNum = 14			
+      intNum = 2
+      intNum = 6
+      intNum = 14			
         </b></code></pre>
       </div>
       <br>
@@ -571,7 +569,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	datatype[] arrayName;
+      datatype[] arrayName;
       </code></pre>
       </div>
       <p>where:</p>
@@ -583,7 +581,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	double[] balance;
+      double[] balance;
       </code></pre>
       </div>
 
@@ -599,7 +597,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	double[] balance = new double[10];
+      double[] balance = new double[10];
       </code></pre>
       </div>
       <br>
@@ -612,8 +610,8 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	double[] balance = new double[10];
-	balance[0] = 4500.0;
+      double[] balance = new double[10];
+      balance[0] = 4500.0;
       </code></pre>
       </div>
       <p>
@@ -622,14 +620,14 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	double[] balance = { 2340.0, 4523.69, 3421.0};
+      double[] balance = { 2340.0, 4523.69, 3421.0};
       </code></pre>
       </div>
       <p>You can also create and initialise an array, as shown :</p>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	int [] marks = new int[5]  { 99,  98, 92, 97, 95};
+      int [] marks = new int[5]  { 99,  98, 92, 97, 95};
       </code></pre>
       </div>
       <br>
@@ -643,7 +641,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	double salary = balance[9];
+      double salary = balance[9];
       </code></pre>
       </div>
       <p>
@@ -653,35 +651,35 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	int[] intExampleArray = new int[10]; // intExampleArray is an array of 10 integers
+      int[] intExampleArray = new int[10]; // intExampleArray is an array of 10 integers
 
-	// initialize elements of array intExampleArray
-	for (int i = 0; i &lt; 10; i++)
-	{
-		intExampleArray[i] = i + 100;
-	}
+      // initialize elements of array intExampleArray
+      for (int i = 0; i &lt; 10; i++)
+      {
+        intExampleArray[i] = i + 100;
+      }
 
-	// output each array element's value
-	for (int j = 0; j &lt; 10; j++)
-	{
-		Console.WriteLine("Element[{0}] = {1}", j, intExampleArray[j]);
-	}
+      // output each array element's value
+      for (int j = 0; j &lt; 10; j++)
+      {
+        Console.WriteLine("Element[{0}] = {1}", j, intExampleArray[j]);
+      }
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output:
+      Output:
           
-          Element[0] = 100
-          Element[1] = 101
-          Element[2] = 102
-          Element[3] = 103
-          Element[4] = 104
-          Element[5] = 105
-          Element[6] = 106
-          Element[7] = 107
-          Element[8] = 108
-          Element[9] = 109		
+      Element[0] = 100
+      Element[1] = 101
+      Element[2] = 102
+      Element[3] = 103
+      Element[4] = 104
+      Element[5] = 105
+      Element[6] = 106
+      Element[7] = 107
+      Element[8] = 108
+      Element[9] = 109		
         </b></code></pre>
       </div>
       <br>
@@ -690,42 +688,42 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	bool booNumCheck = true;
-	int intNum = -999; // error value
-	while (booNumCheck == true)
-	{
-		int intMin = 1; // minimum acceptable value
-		int intMax = 10; // maximum acceptable value
-		Console.Write("Enter a number between " + intMin + " and " + intMax + ": ");
+      bool booNumCheck = true;
+      int intNum = -999; // error value
+      while (booNumCheck == true)
+      {
+        int intMin = 1; // minimum acceptable value
+        int intMax = 10; // maximum acceptable value
+        Console.Write("Enter a number between " + intMin + " and " + intMax + ": ");
                 
-		while (!int.TryParse(Console.ReadLine(), out intNum))
-		{
-			Console.Write("The value must be an integer, try again: ");
-		}
+        while (!int.TryParse(Console.ReadLine(), out intNum))
+        {
+          Console.Write("The value must be an integer, try again: ");
+        }
 
-		if (intNum >= intMin && intNum &lt;= intMax)
-		{
-			// number is between intMin and intMax inclusive
-			booNumCheck = false;
-		}
-		else
-		{
-			// number is invalid
-			Console.WriteLine("Invalid input, must be between " + intMin + " and " + intMax);
-		}
-	}
+        if (intNum >= intMin && intNum &lt;= intMax)
+        {
+          // number is between intMin and intMax inclusive
+          booNumCheck = false;
+        }
+        else
+        {
+          // number is invalid
+          Console.WriteLine("Invalid input, must be between " + intMin + " and " + intMax);
+        }
+      }
 
-	Console.WriteLine("intNum is: " + intNum);
+      Console.WriteLine("intNum is: " + intNum);
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output:
+      Output:
           
-          Enter a number between 1 and 10: <b>11</b>
-          Invalid input, must be between 1 and 10
-          Enter a number between 1 and 10: <b>2</b>
-          intNum is: 2
+      Enter a number between 1 and 10: <b>11</b>
+      Invalid input, must be between 1 and 10
+      Enter a number between 1 and 10: <b>2</b>
+      intNum is: 2
         </b></code></pre>
       </div>
       <br>
@@ -734,14 +732,14 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	try
-	{
-		// dangerous code here!
-	}
-	catch (Exception excpFile)
-	{
-		Console.WriteLine(excpFile.ToString());
-	}
+      try
+      {
+        // dangerous code here!
+      }
+      catch (Exception excpFile)
+      {
+        Console.WriteLine(excpFile.ToString());
+      }
       </code></pre>
       </div>
       <br>
@@ -750,18 +748,18 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	Console.Write("What is your name? ");
-	string strName = Console.ReadLine();
+      Console.Write("What is your name? ");
+      string strName = Console.ReadLine();
       
-	Console.WriteLine("Your name is " + strName);
+      Console.WriteLine("Your name is " + strName);
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-	Output:
+      Output:
           
-	What is your name? <i>Bob</i>
-	Your name is Bob
+      What is your name? <i>Bob</i>
+      Your name is Bob
         </b></code></pre>
       </div>
       <br>
@@ -770,12 +768,12 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	Console.Write("Enter number one: ");
-	int intNum = -999; // error value
-	while (!int.TryParse(Console.ReadLine(), out intNum))
-	{
-		Console.Write("The value must be an integer, try again: ");
-	}
+      Console.Write("Enter number one: ");
+      int intNum = -999; // error value
+      while (!int.TryParse(Console.ReadLine(), out intNum))
+      {
+        Console.Write("The value must be an integer, try again: ");
+      }
       </code></pre>
       </div>
       <p>Copy and paste but change intSumA to be a more suitable variable name and change the question in the first line.</p>
@@ -785,12 +783,12 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	Console.Write("Enter number one: ");
-	double dblNum = -999; // error value
-	while (!double.TryParse(Console.ReadLine(), out dblNum))
-	{
-		Console.Write("The value must be a double, try again: ");
-	}
+      Console.Write("Enter number one: ");
+      double dblNum = -999; // error value
+      while (!double.TryParse(Console.ReadLine(), out dblNum))
+      {
+        Console.Write("The value must be a double, try again: ");
+      }
       </code></pre>
       </div>
       <p>Copy and paste but change dblNumA to be a more suitable variable name and change the question in the first line.</p>
@@ -800,51 +798,51 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// get specific input
-	// Setup variables outside loop
-	bool booValid = false;
-	string strPizzaSize = "";
+      // get specific input
+      // Setup variables outside loop
+      bool booValid = false;
+      string strPizzaSize = "";
 
-	while(booValid == false)
-	{
-		// We are looking for small, medium or large
-		// Let's abbreviate it to 'S', 'M' or 'L'
-		Console.Write("What pizza size do you want?\n(S, M or L): ");
+      while(booValid == false)
+      {
+        // We are looking for small, medium or large
+        // Let's abbreviate it to 'S', 'M' or 'L'
+        Console.Write("What pizza size do you want?\n(S, M or L): ");
 
-		// .ToUpper() converts the string to capital letters, so 'm' will be "M"
-		string strAnswer = Console.ReadLine().ToUpper(); 
+        // .ToUpper() converts the string to capital letters, so 'm' will be "M"
+        string strAnswer = Console.ReadLine().ToUpper(); 
 
-		if(strAnswer == "S" || strAnswer == "M" || strAnswer == "L")
-		{
-			// got a valid answer
-			// convert answer using chained conditional
-			if(strAnswer == "S")
-			{
-				strPizzaSize = "Small";
-			}
-			else if (strAnswer == "M")
-			{
-				strPizzaSize = "Medium";
-			}
-			else if(strAnswer == "L")
-			{
-				strPizzaSize = "Large";
-			}
-			else
-			{
-				strPizzaSize = "error";
-			}
+        if(strAnswer == "S" || strAnswer == "M" || strAnswer == "L")
+        {
+          // got a valid answer
+          // convert answer using chained conditional
+          if(strAnswer == "S")
+          {
+            strPizzaSize = "Small";
+          }
+          else if (strAnswer == "M")
+          {
+            strPizzaSize = "Medium";
+          }
+          else if(strAnswer == "L")
+          {
+            strPizzaSize = "Large";
+          }
+          else
+          {
+            strPizzaSize = "error";
+          }
 
-			booValid = true;
-		}
-		else
-		{
-			// error message
-			Console.WriteLine("Must be S, M or L");
-		}
-	}
+          booValid = true;
+        }
+        else
+        {
+          // error message
+          Console.WriteLine("Must be S, M or L");
+        }
+      }
 
-	Console.WriteLine($"Pizza Size: {strPizzaSize}.");
+      Console.WriteLine($"Pizza Size: {strPizzaSize}.");
       </code></pre>
       </div>
       <p>This is a pattern you can change to suit your situation.</p>
@@ -854,22 +852,22 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	public bool isStringEmpty(string strIn)
+      public bool isStringEmpty(string strIn)
+      {
+        bool booValid = false;
+        if (strIn.Equals("") || strIn.Equals(string.Empty))
         {
-            bool booValid = false;
-            if (strIn.Equals("") || strIn.Equals(string.Empty))
-            {
-                booValid = true;
-            }
-
-            return booValid;
-
-            // Example use:
-            //if(valCheck.isStringEmpty(strName))
-            //    {
-            //        lblDebug.Content = "Name cannot be empty!";
-            //    }
+          booValid = true;
         }
+
+        return booValid;
+
+        // Example use:
+        //if(valCheck.isStringEmpty(strName))
+        //    {
+        //        lblDebug.Content = "Name cannot be empty!";
+        //    }
+      }
       </code></pre>
       </div>
       <br>
@@ -878,23 +876,23 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	public bool isStringNumericInteger(string strIn)
-        {
-			// Validation function that checks if a string can be converted to an integer
-            int intRetVal = -999;
-            bool booValid = int.TryParse(strIn, out intRetVal);
-            // If this fails to convert properly, intRetVal will = 0 and booValid will = false
-            return booValid;
-        }
+      public bool isStringNumericInteger(string strIn)
+      {
+        // Validation function that checks if a string can be converted to an integer
+        int intRetVal = -999;
+        bool booValid = int.TryParse(strIn, out intRetVal);
+        // If this fails to convert properly, intRetVal will = 0 and booValid will = false
+        return booValid;
+      }
 	
-	public bool isStringNumericDouble(string strIn)
-        {
-			// Validation function that checks if a string can be converted to a double
-            double dblRetVal = -999;
-            bool booValid = double.TryParse(strIn, out dblRetVal);
-            // If this fails to convert properly, intRetVal will = 0 and booValid will = false
-            return booValid;
-        }
+      public bool isStringNumericDouble(string strIn)
+      {
+        // Validation function that checks if a string can be converted to a double
+        double dblRetVal = -999;
+        bool booValid = double.TryParse(strIn, out dblRetVal);
+        // If this fails to convert properly, intRetVal will = 0 and booValid will = false
+        return booValid;
+      }
       </code></pre>
       </div>
       <br>
@@ -903,17 +901,17 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	public bool isIntNumberInRange(int intIn, int intMin, int intMax)
+      public bool isIntNumberInRange(int intIn, int intMin, int intMax)
+      {
+        bool booNumInRange = true;
+        // With this logic, we accept the number (don't turn booNumInRange to false) if it is between intMin-intMax inclusive.
+        if (intIn < intMin || intIn > intMax)
         {
-            bool booNumInRange = true;
-            // With this logic, we accept the number (don't turn booNumInRange to false) if it is between intMin-intMax inclusive.
-            if (intIn < intMin || intIn > intMax)
-            {
-                booNumInRange = false;
-            }
-
-            return booNumInRange;
+          booNumInRange = false;
         }
+
+        return booNumInRange;
+      }
       </code></pre>
       </div>
       <br>
@@ -922,11 +920,11 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	public bool isStringAndStringEqual(string strOne, string strTwo)
-        {
-            bool booValid = string.Equals(strOne, strTwo);
-            return booValid;
-        }
+      public bool isStringAndStringEqual(string strOne, string strTwo)
+      {
+        bool booValid = string.Equals(strOne, strTwo);
+        return booValid;
+      }
       </code></pre>
       </div>
       <br>
@@ -935,7 +933,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	string strFileName = AppDomain.CurrentDomain.BaseDirectory + "amazing.txt";
+      string strFileName = AppDomain.CurrentDomain.BaseDirectory + "amazing.txt";
       </code></pre>
       </div>
       <p>
@@ -948,25 +946,25 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	using System.IO; // We need this if we are going to use files!
+      using System.IO; // We need this if we are going to use files!
       </code></pre>
       </div>
       <p>Remember you need to import System.IO !!! (above)</p>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	try
-	{
-		// Delete the file if it exists.
-		if (File.Exists(strFileName))
-		{
-			File.Delete(strFileName);
-		}
-	}
-	catch (Exception excpFile)
-	{
-		Console.WriteLine(excpFile.ToString());
-	}
+      try
+      {
+        // Delete the file if it exists.
+        if (File.Exists(strFileName))
+        {
+          File.Delete(strFileName);
+        }
+      }
+      catch (Exception excpFile)
+      {
+        Console.WriteLine(excpFile.ToString());
+      }
       
       </code></pre>
       </div>
@@ -983,20 +981,20 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	try
-	{
-		// Create the actual file
-		using (StreamWriter fileStr = File.CreateText(strFileName))
-		{
-			// These 2 lines write out our string to the file!
-			string strLineOne = "This is super amazing";
-			fileStr.WriteLine(strLineOne);
-		}
-	}
-	catch (Exception excpFile)
-	{
-		Console.WriteLine(excpFile.ToString());
-	}
+      try
+      {
+        // Create the actual file
+        using (StreamWriter fileStr = File.CreateText(strFileName))
+        {
+          // These 2 lines write out our string to the file!
+          string strLineOne = "This is super amazing";
+          fileStr.WriteLine(strLineOne);
+        }
+      }
+      catch (Exception excpFile)
+      {
+        Console.WriteLine(excpFile.ToString());
+      }
       </code></pre>
       </div>
       <br>
@@ -1012,24 +1010,24 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	try
-	{
-		// This block of code is how we read from a file
-		using (StreamReader srFileRead = File.OpenText(strFileNameA))
-		{
-			string strTemp = "";
-			while ((strTemp = srFileRead.ReadLine()) != null)
-			{
-				Console.WriteLine(strTemp);
-			}
-			// Make a new line to be neat
-			Console.WriteLine("");
-		}
-	}
-	catch (Exception excpFile)
-	{
-		Console.WriteLine(excpFile.ToString());
-	}
+      try
+      {
+        // This block of code is how we read from a file
+        using (StreamReader srFileRead = File.OpenText(strFileNameA))
+        {
+          string strTemp = "";
+          while ((strTemp = srFileRead.ReadLine()) != null)
+          {
+            Console.WriteLine(strTemp);
+          }
+          // Make a new line to be neat
+          Console.WriteLine("");
+        }
+      }
+      catch (Exception excpFile)
+      {
+      Console.WriteLine(excpFile.ToString());
+      }
       </code></pre>
       </div>
       <p>
@@ -1039,23 +1037,23 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// initialise the strings outside of the tryblock
-	string strLineOne = ""; 
-	string strLineTwo = "";
+      // initialise the strings outside of the tryblock
+      string strLineOne = ""; 
+      string strLineTwo = "";
       
-	try
-	{
-		// This block of code is how we read from a file
-		using (StreamReader srFileRead = File.OpenText(strFileNameA))
-		{
-			strLineOne = srFileRead.ReadLine();
-			strLineTwo = srFileRead.ReadLine();
-		}
-	}
-	catch (Exception excpFile)
-	{
-		Console.WriteLine(excpFile.ToString());
-	}
+      try
+      {
+        // This block of code is how we read from a file
+        using (StreamReader srFileRead = File.OpenText(strFileNameA))
+        {
+          strLineOne = srFileRead.ReadLine();
+          strLineTwo = srFileRead.ReadLine();
+        }
+      }
+      catch (Exception excpFile)
+      {
+        Console.WriteLine(excpFile.ToString());
+      }
       </code></pre>
       </div>
       <br>
@@ -1071,32 +1069,32 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	try
-	{
-		if (!File.Exists(strFileName))
-		{
-			// If the file doesn't exist, we'll make a blank one
-			using (StreamWriter fileStr = File.CreateText(strFileName))
-			{
-				// Writing a blank text file
-				string strLineOne = "";
-				fileStr.Write(strLineOne);
-			}
-		}
+      try
+      {
+        if (!File.Exists(strFileName))
+        {
+          // If the file doesn't exist, we'll make a blank one
+          using (StreamWriter fileStr = File.CreateText(strFileName))
+          {
+            // Writing a blank text file
+            string strLineOne = "";
+            fileStr.Write(strLineOne);
+          }
+        }
         
-		// This block of code will append (add to) the file
-		using (StreamWriter swFile = File.AppendText(strFileName))
-		{
-			Console.WriteLine("Adding 3 lines!");
-			swFile.WriteLine("This");
-			swFile.WriteLine("is extra");
-			swFile.WriteLine("text");
-		}
-	}
-	catch(Exception excpFile)
-	{
-		Console.WriteLine(excpFile.ToString());
-	}
+        // This block of code will append (add to) the file
+        using (StreamWriter swFile = File.AppendText(strFileName))
+        {
+          Console.WriteLine("Adding 3 lines!");
+          swFile.WriteLine("This");
+          swFile.WriteLine("is extra");
+          swFile.WriteLine("text");
+        }
+      }
+      catch(Exception excpFile)
+      {
+        Console.WriteLine(excpFile.ToString());
+      }
       </code></pre>
       </div>
       <br>
@@ -1105,16 +1103,16 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Math.Round() demonstration
-	double dblExample = 3.1415926535;
+      // Math.Round() demonstration
+      double dblExample = 3.1415926535;
 
-	// how to round to the nearest whole number
-	double dblOutOne = Math.Round(dblExample);
-	Console.WriteLine(dblOutOne);
+      // how to round to the nearest whole number
+      double dblOutOne = Math.Round(dblExample);
+      Console.WriteLine(dblOutOne);
 
-	// How to round to x decimal places (in this case 3)
-	double dblOutTwo = Math.Round(dblExample, 3);
-	Console.WriteLine(dblOutTwo);
+      // How to round to x decimal places (in this case 3)
+      double dblOutTwo = Math.Round(dblExample, 3);
+      Console.WriteLine(dblOutTwo);
       </code></pre>
       </div>
       <div class="code-section">
@@ -1131,17 +1129,17 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-    double dblOne = 3;
-    double dblTwo = 2;
+      double dblOne = 3;
+      double dblTwo = 2;
 
-    Console.WriteLine("3^2 = " + Math.Pow(dblOne,dblTwo));
+      Console.WriteLine("3^2 = " + Math.Pow(dblOne,dblTwo));
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output:
+      Output:
           
-          3^2 = 9
+      3^2 = 9
         </b></code></pre>
       </div>
       <br>
@@ -1150,19 +1148,19 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Negative numbers will return NaN (which means "not a number").
-	// NaN will return NaN.
+      // Negative numbers will return NaN (which means "not a number").
+      // NaN will return NaN.
 
-	double dblResult = Math.Sqrt(9);
+      double dblResult = Math.Sqrt(9);
 
-	Console.WriteLine("Square Root of 9: " + dblResult);
+      Console.WriteLine("Square Root of 9: " + dblResult);
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output:
+      Output:
           
-          Square Root of 9: 3
+      Square Root of 9: 3
         </b></code></pre>
       </div>
       <br>
@@ -1171,25 +1169,25 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Math.Max(number1, number2) returns the greater value from number1 and number2.
+      // Math.Max(number1, number2) returns the greater value from number1 and number2.
 
-	// Math.Min(number1, number2) returns the smaller value from number1 and number2.
+      // Math.Min(number1, number2) returns the smaller value from number1 and number2.
 
-	int intSmall = -256;
-	int intBig = 128;
+      int intSmall = -256;
+      int intBig = 128;
 
-	int intMaxResult = Math.Max(intSmall, intBig);
-	int intMinResult = Math.Min(intSmall, intBig);
+      int intMaxResult = Math.Max(intSmall, intBig);
+      int intMinResult = Math.Min(intSmall, intBig);
 
-	Console.WriteLine($"Max: {intMaxResult}\nMin: {intMinResult}");
+      Console.WriteLine($"Max: {intMaxResult}\nMin: {intMinResult}");
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-		Output:
+      Output:
           
-		Max: 128
-		Min: -256
+      Max: 128
+      Min: -256
         </b></code></pre>
       </div>
       <br>
@@ -1198,16 +1196,16 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Generate random numbers between 1 and 6
-	Random randGen = new Random();
-	int intMin = 1;
-	int intMax = 7; // the maximum is an "exclusive maximum"
-	// Exclusive maximum means that it never occurs in output
+      // Generate random numbers between 1 and 6
+      Random randGen = new Random();
+      int intMin = 1;
+      int intMax = 7; // the maximum is an "exclusive maximum"
+      // Exclusive maximum means that it never occurs in output
 
-	// Generate some random numbers and display them
-	Console.WriteLine(randGen.Next(intMin, intMax));
-	Console.WriteLine(randGen.Next(intMin, intMax));
-	Console.WriteLine(randGen.Next(intMin, intMax));
+      // Generate some random numbers and display them
+      Console.WriteLine(randGen.Next(intMin, intMax));
+      Console.WriteLine(randGen.Next(intMin, intMax));
+      Console.WriteLine(randGen.Next(intMin, intMax));
       </code></pre>
       </div>
       <br>
@@ -1240,12 +1238,12 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Customisable dice roll, ie: d6 use intMax as 6
-	public int RollNormalDie(int intMax)
-        {
-            intMax++; // needs to be one more because of weird way random.Next works
-            return rngGen.Next(1, intMax);
-        }
+      // Customisable dice roll, ie: d6 use intMax as 6
+      public int RollNormalDie(int intMax)
+      {
+        intMax++; // needs to be one more because of weird way random.Next works
+        return rngGen.Next(1, intMax);
+      }
       </code></pre>
       </div>
       <br>
@@ -1278,7 +1276,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	string strName = txtName.Text;
+      string strName = txtName.Text;
       </code></pre>
       </div>
       <p>
@@ -1291,9 +1289,9 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	int intRetVal = -999;
-	bool booValid = int.TryParse(txtBaseHP.Text, out intRetVal);
-	// If this fails to convert properly, intRetVal will = 0 and booValid will = false
+      int intRetVal = -999;
+      bool booValid = int.TryParse(txtBaseHP.Text, out intRetVal);
+      // If this fails to convert properly, intRetVal will = 0 and booValid will = false
       </code></pre>
       </div>
       <p>
@@ -1307,9 +1305,9 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	double dblRetVal = -999;
-	bool booValid = double.TryParse(txtInput.Text, out dblRetVal);
-	// If this fails to convert properly, dblRetVal will = 0 and booValid will = false
+      double dblRetVal = -999;
+      bool booValid = double.TryParse(txtInput.Text, out dblRetVal);
+      // If this fails to convert properly, dblRetVal will = 0 and booValid will = false
       </code></pre>
       </div>
       <p>
@@ -1323,24 +1321,24 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	int intPokeLvl = -999;
-	bool booValid = int.TryParse(txtPokeLvl.Text, out intPokeLvl);
+      int intPokeLvl = -999;
+      bool booValid = int.TryParse(txtPokeLvl.Text, out intPokeLvl);
 
-	bool booNumInRange = true;
-	// With this logic, we accept the number (don't turn booNumInRange to false) if it is between 1-100 inclusive.
-	if(intPokeLvl &lt;= 0 || intPokeLvl > 100)
-	{
-		booNumInRange = false;
-	}
+      bool booNumInRange = true;
+      // With this logic, we accept the number (don't turn booNumInRange to false) if it is between 1-100 inclusive.
+      if(intPokeLvl &lt;= 0 || intPokeLvl > 100)
+      {
+        booNumInRange = false;
+      }
 
-	if (booValid == false || booNumInRange == false)
-	{
-		lblLevelError.Content = "Must be an integer between 1-100";
-	}
-	else
-	{
-		// Your code goes here, if it gets to this part of the code, it has passed all of our validation
-	}
+      if (booValid == false || booNumInRange == false)
+      {
+        lblLevelError.Content = "Must be an integer between 1-100";
+      }
+      else
+      {
+        // Your code goes here, if it gets to this part of the code, it has passed all of our validation
+      }
       </code></pre>
       </div>
       <p>
@@ -1353,23 +1351,23 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	string strName = txtName.Text;
-	bool booValidName = true;
+      string strName = txtName.Text;
+      bool booValidName = true;
       
-	// With this logic, we only accept if the user has put in something in the textbox
-	if (strName.Equals(""))
-	{
-		booValidName = false;
-	}
+      // With this logic, we only accept if the user has put in something in the textbox
+      if (strName.Equals(""))
+      {
+        booValidName = false;
+      }
       
-	if (booValidName == false)
-	{
-		lblNameError.Content = "Please enter a name";
-	}
-	else
-	{
-		// Your code goes here, if it gets to this part of the code, it has passed all of our validation
-	}
+      if (booValidName == false)
+      {
+        lblNameError.Content = "Please enter a name";
+      }
+      else
+      {
+        // Your code goes here, if it gets to this part of the code, it has passed all of our validation
+      }
       </code></pre>
       </div>
       <p>
@@ -1399,18 +1397,18 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	if (rbYes.IsChecked == true)
-	{
-		lblOutput.Content = "Yes was selected";
-	}
-	else if (rbNo.IsChecked == true)
-	{
-		lblOutput.Content = "No was selected";
-	}
-	else
-	{
-		lblOutput.Content = "Something went very wrong";
-	}
+      if (rbYes.IsChecked == true)
+      {
+        lblOutput.Content = "Yes was selected";
+      }
+      else if (rbNo.IsChecked == true)
+      {
+        lblOutput.Content = "No was selected";
+      }
+      else
+      {
+        lblOutput.Content = "Something went very wrong";
+      }
       </code></pre>
       </div>
       <p>The .IsChecked property is a boolean variable.</p>
@@ -1420,18 +1418,18 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Initialise your dropdown/Combobox after InitializeComponent() in MainWindow
-	public MainWindow()
-	{
-		InitializeComponent();
+      // Initialise your dropdown/Combobox after InitializeComponent() in MainWindow
+      public MainWindow()
+      {
+        InitializeComponent();
 
-		// put things in combobox
-		cmbExample.Items.Add("Option 1");
-		cmbExample.Items.Add("Option 2");
+        // put things in combobox
+        cmbExample.Items.Add("Option 1");
+        cmbExample.Items.Add("Option 2");
 
-		// set combobox to have first item selected
-		cmbExample.SelectedIndex = 0;
-	}
+        // set combobox to have first item selected
+        cmbExample.SelectedIndex = 0;
+      }
       </code></pre>
       </div>
       <p>
@@ -1444,9 +1442,9 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	string strSelectedItem = cmbExample.SelectedItem.ToString();
+      string strSelectedItem = cmbExample.SelectedItem.ToString();
 
-	lblOutput.Content = "You chose: " + strSelectedItem;
+      lblOutput.Content = "You chose: " + strSelectedItem;
       </code></pre>
       </div>
       <p><b>Output if Option 1 selected: </b>You chose: Option 1</p>
@@ -1456,87 +1454,87 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// a simple function that sets up a slider to your specifications
-	private void SetupSlider(Slider sliDer, int intMin, int intMax, int intFreq, bool booSnapToTick)
-        {
-            // Set minimum/maximum number for slider
-            sliDer.Minimum = intMin;
-            sliDer.Maximum = intMax;
+      // a simple function that sets up a slider to your specifications
+      private void SetupSlider(Slider sliDer, int intMin, int intMax, int intFreq, bool booSnapToTick)
+      {
+        // Set minimum/maximum number for slider
+        sliDer.Minimum = intMin;
+        sliDer.Maximum = intMax;
 
-            // Set frequency of ticks
-            sliDer.TickFrequency = intFreq;
+        // Set frequency of ticks
+        sliDer.TickFrequency = intFreq;
 
-            // Set tick position
-            sliDer.TickPlacement = System.Windows.Controls.Primitives.TickPlacement.BottomRight;
+        // Set tick position
+        sliDer.TickPlacement = System.Windows.Controls.Primitives.TickPlacement.BottomRight;
 
-            // Set snapping
-            sliDer.IsSnapToTickEnabled = booSnapToTick;
+        // Set snapping
+        sliDer.IsSnapToTickEnabled = booSnapToTick;
 
-            // Finally, set slider to minimum value
-            sliDer.Value = intMin;
-            sliDer.Value = intMin + 1; // silly trick to get textbox to update at start
-            sliDer.Value = intMin;
-        }
+        // Finally, set slider to minimum value
+        sliDer.Value = intMin;
+        sliDer.Value = intMin + 1; // silly trick to get textbox to update at start
+        sliDer.Value = intMin;
+      }
       </code></pre>
       </div>
       <p><b>An example of the function being called at startup</p>
 	  <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	public MainWindow()
-        {
-            InitializeComponent();
-            SetupSlider(sliGeneric, 0, 100, 5, true);
-        }
+      public MainWindow()
+      {
+        InitializeComponent();
+        SetupSlider(sliGeneric, 0, 100, 5, true);
+      }
       </code></pre>
       </div>
 	  <p><b>Basic functionality of textbox next to slider</p>
 	  <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Get this listener by double clicking your slider
-	// Responds to the slider being changed (slid?)
-	private void sliGeneric_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+      // Get this listener by double clicking your slider
+      // Responds to the slider being changed (slid?)
+      private void sliGeneric_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+      {
+        // Slider has been changed
+        txtSlider.Background = Brushes.Transparent; // set background to normal colour
+        // unfortunately sliders use double, not an integer so we need to round it
+        int RoundedResult = (int)Math.Round(sliGeneric.Value);
+        txtSlider.Text = RoundedResult.ToString();
+      }
+
+      // Responds to enter being pressed in the textbox
+      // To get to work: Add KeyDown="OnKeyDownHandler" to the textbox in the xaml
+      // ie: <TextBox x:Name="txtSlider" HorizontalAlignment="Left" Height="23" Margin="334,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="OnKeyDownHandler"/>
+      private void OnKeyDownHandler(object sender, KeyEventArgs e)
+      {
+        if (e.Key == Key.Return)
         {
-            // Slider has been changed
+          // user pressed enter
+
+          // first we're going to validate the number
+          int intSliderValue = -999;
+          bool booValid = int.TryParse(txtSlider.Text, out intSliderValue);
+
+          bool booNumInRange = true;
+          // With this logic, we accept the number (don't turn booNumInRange to false) if it is between 1-100 inclusive.
+          if (intSliderValue <= sliGeneric.Minimum || intSliderValue > sliGeneric.Maximum)
+          {
+            booNumInRange = false;
+          }
+
+          if (booValid == false || booNumInRange == false)
+          {
+            txtSlider.Background = Brushes.Red; // set background to red to indicate a problem
+          }
+          else
+          {
+            // set value of slider
             txtSlider.Background = Brushes.Transparent; // set background to normal colour
-			// unfortunately sliders use double, not an integer so we need to round it
-			int RoundedResult = (int)Math.Round(sliGeneric.Value);
-			txtSlider.Text = RoundedResult.ToString();
+            sliGeneric.Value = intSliderValue;
+          }
         }
-
-	// Responds to enter being pressed in the textbox
-	// To get to work: Add KeyDown="OnKeyDownHandler" to the textbox in the xaml
-	// ie: <TextBox x:Name="txtSlider" HorizontalAlignment="Left" Height="23" Margin="334,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="OnKeyDownHandler"/>
-        private void OnKeyDownHandler(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Return)
-            {
-                // user pressed enter
-
-                // first we're going to validate the number
-                int intSliderValue = -999;
-                bool booValid = int.TryParse(txtSlider.Text, out intSliderValue);
-
-                bool booNumInRange = true;
-                // With this logic, we accept the number (don't turn booNumInRange to false) if it is between 1-100 inclusive.
-                if (intSliderValue <= sliGeneric.Minimum || intSliderValue > sliGeneric.Maximum)
-                {
-                    booNumInRange = false;
-                }
-
-                if (booValid == false || booNumInRange == false)
-                {
-                    txtSlider.Background = Brushes.Red; // set background to red to indicate a problem
-                }
-                else
-                {
-                    // set value of slider
-                    txtSlider.Background = Brushes.Transparent; // set background to normal colour
-                    sliGeneric.Value = intSliderValue;
-                }
-            }
-        }
+      }
       </code></pre>
       </div>
       <br>
@@ -1545,30 +1543,30 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// You will need at the top of your file:
-	// using Microsoft.Win32;
-	// using System.IO;
-	public string OpenFileBrowser(string strFilter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
-	string strInitialDirectory = "Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)")
+      // You will need at the top of your file:
+      // using Microsoft.Win32;
+      // using System.IO;
+      public string OpenFileBrowser(string strFilter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
+      string strInitialDirectory = "Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)")
+      {
+        // https://wpf-tutorial.com/dialogs/the-openfiledialog/
+        string strRetVal = "error"; // if this value is returned, an error has occured!
+        OpenFileDialog openFileDialog = new OpenFileDialog();
+        openFileDialog.Filter = strFilter;
+        openFileDialog.InitialDirectory = strInitialDirectory;
+
+        if (openFileDialog.ShowDialog() == true)
         {
-            // https://wpf-tutorial.com/dialogs/the-openfiledialog/
-            string strRetVal = "error"; // if this value is returned, an error has occured!
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = strFilter;
-            openFileDialog.InitialDirectory = strInitialDirectory;
-
-            if (openFileDialog.ShowDialog() == true)
-            {
-                // if it is true we will return the file name
-                strRetVal = openFileDialog.FileName;
-            }
-            else
-            {
-                strRetVal = "No file has been selected";
-            }
-
-            return strRetVal;
+          // if it is true we will return the file name
+          strRetVal = openFileDialog.FileName;
         }
+        else
+        {
+          strRetVal = "No file has been selected";
+        }
+
+        return strRetVal;
+      }
       </code></pre>
       </div>
       <br>
@@ -1577,31 +1575,31 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// You will need at the top of your file:
-	// using Microsoft.Win32;
-	// using System.IO;
-	public string SaveFileBrowser(string strFileName, string strFilter = "Text files (*.txt)|*.txt",
-	bool booAddExtension = true, string strTitle = "Save As", string strInitialDirectory = "AppDomain.CurrentDomain.BaseDirectory")
+      // You will need at the top of your file:
+      // using Microsoft.Win32;
+      // using System.IO;
+      public string SaveFileBrowser(string strFileName, string strFilter = "Text files (*.txt)|*.txt",
+      bool booAddExtension = true, string strTitle = "Save As", string strInitialDirectory = "AppDomain.CurrentDomain.BaseDirectory")
+      {
+        // https://www.wpf-tutorial.com/dialogs/the-savefiledialog/
+
+        string strRetVal = "SaveFileBrowser() error"; // if this value is returned, an error has occured!
+        SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+        // configure the Save File Dialog
+        saveFileDialog.Filter = strFilter;
+        saveFileDialog.InitialDirectory = strInitialDirectory;
+        saveFileDialog.AddExtension = booAddExtension;
+        saveFileDialog.Title = strTitle;
+        saveFileDialog.FileName = strFileName;
+
+        if (saveFileDialog.ShowDialog() == true)
         {
-            // https://www.wpf-tutorial.com/dialogs/the-savefiledialog/
-
-            string strRetVal = "SaveFileBrowser() error"; // if this value is returned, an error has occured!
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            // configure the Save File Dialog
-            saveFileDialog.Filter = strFilter;
-            saveFileDialog.InitialDirectory = strInitialDirectory;
-            saveFileDialog.AddExtension = booAddExtension;
-            saveFileDialog.Title = strTitle;
-            saveFileDialog.FileName = strFileName;
-
-            if (saveFileDialog.ShowDialog() == true)
-            {
-                strRetVal = saveFileDialog.FileName;
-            }
-
-            return strRetVal;
+          strRetVal = saveFileDialog.FileName;
         }
+
+        return strRetVal;
+      }
       </code></pre>
       </div>
       <br>
@@ -1610,11 +1608,11 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-    // Show a generic popup message
-    public void ShowMsg(string strTitle, string strMsg)
-    {
-      MessageBox.Show(strMsg, strTitle);
-    }
+      // Show a generic popup message
+      public void ShowMsg(string strTitle, string strMsg)
+      {
+        MessageBox.Show(strMsg, strTitle);
+      }
       </code></pre>
       </div>
       <br>
@@ -1623,11 +1621,11 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-    // Generic ErrorPopUp
-    public void ErrorPopUp(string strTitle, string strError)
-    {
-      MessageBox.Show(strError, strTitle, MessageBoxButton.OK, MessageBoxImage.Error);
-    }
+      // Generic ErrorPopUp
+      public void ErrorPopUp(string strTitle, string strError)
+      {
+        MessageBox.Show(strError, strTitle, MessageBoxButton.OK, MessageBoxImage.Error);
+      }
       </code></pre>
       </div>
       <br>
@@ -1636,25 +1634,25 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-    // Show a yes/no popup message
-    // Returns false if they click no, true if they click yes
-    // Defaults to the warning messagebox image, but this is chosen by the user if they want
-    public bool YesNoMessageBox(string strMessage, string strTitle, MessageBoxImage mbImage = MessageBoxImage.Warning)
-    {
-      bool booYes;
-      if (MessageBox.Show(strMessage, strTitle, MessageBoxButton.YesNo, mbImage) == MessageBoxResult.Yes)
+      // Show a yes/no popup message
+      // Returns false if they click no, true if they click yes
+      // Defaults to the warning messagebox image, but this is chosen by the user if they want
+      public bool YesNoMessageBox(string strMessage, string strTitle, MessageBoxImage mbImage = MessageBoxImage.Warning)
       {
-        // User clicks Yes
-        booYes = true;
-      }
-      else
-      {
-        // User clicks No 
-        booYes = false;
-      }
+        bool booYes;
+        if (MessageBox.Show(strMessage, strTitle, MessageBoxButton.YesNo, mbImage) == MessageBoxResult.Yes)
+        {
+          // User clicks Yes
+          booYes = true;
+        }
+        else
+        {
+          // User clicks No 
+          booYes = false;
+        }
 
-      return booYes;
-    }
+        return booYes;
+      }
       </code></pre>
       </div>
       <br>
@@ -1664,28 +1662,28 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	/*
-	Function:
-	Argument(s): 
-	Author:
-	Contact: 
-	Last Edited: (date and time)
-	Purpose:
-	*/
+      /*
+      Function:
+      Argument(s): 
+      Author:
+      Contact: 
+      Last Edited: (date and time)
+      Purpose:
+      */
       </code></pre>
       </div>
 	  <p>Class Headers:</p>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	/*
-	Class: 
-	Constructor(s):
-	Author:
-	Contact:
-	Last Edited: (date and time)
-	Purpose:
-	*/
+      /*
+      Class: 
+      Constructor(s):
+      Author:
+      Contact:
+      Last Edited: (date and time)
+      Purpose:
+      */
       </code></pre>
       </div>
       <br>
@@ -1694,40 +1692,40 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// We will use this boolean variable to control the menu
-	//while booMenu is true it will keep returning to the menu
-	bool booMenu = true;
+      // We will use this boolean variable to control the menu
+      //while booMenu is true it will keep returning to the menu
+      bool booMenu = true;
 
-	while(booMenu == true)
-	{
-		// Display a menu
-		Console.WriteLine("1) Safely get an integer from the user\n2) Loop Example\nQ) Quit");
-		Console.Write("Type 1, 2 or Q: ");
+      while(booMenu == true)
+      {
+        // Display a menu
+        Console.WriteLine("1) Safely get an integer from the user\n2) Loop Example\nQ) Quit");
+        Console.Write("Type 1, 2 or Q: ");
 
-		// Get the input from the user
-		string strInput = Console.ReadLine();
+        // Get the input from the user
+        string strInput = Console.ReadLine();
 
-		// This if block is the menu
-		if(strInput.Equals("1"))
-		{
-			ParseIntExample();
-			Console.WriteLine("\n");
-		}
-		else if(strInput.Equals("2"))
-		{
-			LoopExample(10);
-			Console.WriteLine("\n");
-		}
-		else if(strInput.Equals("Q"))
-		{
-			booMenu = false;
-		}
-		else
-		{
-			Console.WriteLine("Invalid option");
-			Console.WriteLine("\n");
-		}
-	}
+        // This if block is the menu
+        if(strInput.Equals("1"))
+        {
+          ParseIntExample();
+          Console.WriteLine("\n");
+        }
+        else if(strInput.Equals("2"))
+        {
+          LoopExample(10);
+          Console.WriteLine("\n");
+        }
+        else if(strInput.Equals("Q"))
+        {
+          booMenu = false;
+        }
+        else
+        {
+          Console.WriteLine("Invalid option");
+          Console.WriteLine("\n");
+        }
+      }
       </code></pre>
       </div>
       <br>
@@ -1736,16 +1734,16 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	DateTime dt = DateTime.Now;
-	string strOut = dt.ToString("G");
-	Console.WriteLine(strOut);
+      DateTime dt = DateTime.Now;
+      string strOut = dt.ToString("G");
+      Console.WriteLine(strOut);
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-          Output (depending on time of course):
+      Output (depending on time of course):
           
-          12/03/2019 9:43:22 AM
+      12/03/2019 9:43:22 AM
         </b></code></pre>
       </div>
       <br>
@@ -1754,23 +1752,23 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Console colours
-	// Sets the foreground and the background colors of the console
-	Console.ForegroundColor = ConsoleColor.Black;
-	Console.BackgroundColor = ConsoleColor.White;
+      // Console colours
+      // Sets the foreground and the background colors of the console
+      Console.ForegroundColor = ConsoleColor.Black;
+      Console.BackgroundColor = ConsoleColor.White;
 
-	// After colour values are set, use Console.Clear() to apply it
-	Console.Clear();
+      // After colour values are set, use Console.Clear() to apply it
+      Console.Clear();
 
-	// These lines will have Black text on White background
-	Console.WriteLine($"Background: {Console.BackgroundColor}");
-	Console.WriteLine($"Foreground: {Console.ForegroundColor}");
+      // These lines will have Black text on White background
+      Console.WriteLine($"Background: {Console.BackgroundColor}");
+      Console.WriteLine($"Foreground: {Console.ForegroundColor}");
 
-	// Console.ResetColor resets the console back to the default foreground and background colors
-	Console.ResetColor();
+      // Console.ResetColor resets the console back to the default foreground and background colors
+      Console.ResetColor();
             
-	// This line will be back to standard foreground/background coloirs
-	Console.WriteLine("Back to standard console colours");
+      // This line will be back to standard foreground/background colours
+      Console.WriteLine("Back to standard console colours");
       </code></pre>
       </div>
       <br>
