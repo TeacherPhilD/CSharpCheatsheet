@@ -5,6 +5,9 @@ Resource full of examples of basic C# things. Raise an issue if you want anythin
 
 **ChangeLog**  
 **Pre-Release**  
+**v1.0-RC1**  
+- Standardised code indentation
+
 **4.7**  
 - Added popup/messagebox examples
 - String combining now shows three methods
@@ -18,4 +21,3 @@ Resource full of examples of basic C# things. Raise an issue if you want anythin
 - Added some validation examples
 - Added some basic random examples
 - Rewrite of GUI open/save
-
