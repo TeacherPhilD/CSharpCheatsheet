@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>C# Cheat Sheet v4.6</title>
+    <title>C# Cheat Sheet v4.7</title>
     <style>
 
 :root {
@@ -123,7 +123,7 @@ button:hover {
 }
 
 pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
-	</style>
+    </style>
   </head>
 
   <body>
@@ -136,11 +136,12 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ Core concepts</span>
         <div class="collapse">
           <ul>
+            <li><a href="#datatypes">Data Types</a></li>
             <li><a href="#variablescope">Variable Scope</a></li>
             <li><a href="#combinestrings">Combine strings and output to console</a></li>
             <li><a href="#compstrings">Compare strings (if statements)</a></li>
             <li><a href="#compnums">Compare numbers (if statements)</a></li>
-	    <li><a href="#switchstatements">Switch Statements</a></li>
+            <li><a href="#switchstatements">Switch Statements</a></li>
             <li><a href="#maths">Simple Maths</a></li>
             <li><a href="#simplefunction">Simple functions</a></li>
             <li><a href="#forloop">For loop (counted loop)</a></li>
@@ -155,25 +156,25 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </div>
       <div>
         <span>+ Console Input</span>
-	<div class="collapse">
+        <div class="collapse">
           <ul>
-	    <li><a href="#getstring">Get a string from the user</a></li>
+		    <li><a href="#getstring">Get a string from the user</a></li>
             <li><a href="#getint">Get an integer from the user</a></li>
             <li><a href="#getdouble">Get a double from the user</a></li>
-	    <li><a href="#getspecific">Get a specific value from the user</a></li>
-	  </ul>
-	</div>
+            <li><a href="#getspecific">Get a specific value from the user</a></li>
+          </ul>
+        </div>
       </div>
       <div>
         <span>+ Validation</span>
-	<div class="collapse">
+        <div class="collapse">
           <ul>
-	    <li><a href="#validstringempty">If string is empty</a></li>
+            <li><a href="#validstringempty">If string is empty</a></li>
             <li><a href="#validstringnum">If string is number</a></li>
             <li><a href="#validnuminrange">If number is in a range</a></li>
-	    <li><a href="#validstringsequal">If 2 strings are the same</a></li>
-	  </ul>
-	</div>
+            <li><a href="#validstringsequal">If 2 strings are the same</a></li>
+          </ul>
+        </div>
       </div>
       <div>
         <span>+ Files</span>
@@ -192,9 +193,9 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <div class="collapse">
           <ul>
             <li><a href="#roundingdoubles">Maths: Rounding</a></li>
-	    <li><a href="#mathspower">Maths: Power</a></li>
-	    <li><a href="#mathssqrt">Maths: Square Root</a></li>
-	    <li><a href="#mathsmaxmin">Maths: Max/Min</a></li>
+            <li><a href="#mathspower">Maths: Power</a></li>
+            <li><a href="#mathssqrt">Maths: Square Root</a></li>
+            <li><a href="#mathsmaxmin">Maths: Max/Min</a></li>
           </ul>
         </div>
       </div>
@@ -202,29 +203,39 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ Random</span>
         <div class="collapse">
           <ul>
-	    <li><a href="#randomnumbers">Random Numbers</a></li>
+	        <li><a href="#randomnumbers">Random Numbers</a></li>
             <li><a href="#randomcointoss">Random: Coin Toss</a></li>
             <li><a href="#randomdice">Random: Roll x-sided Dice</a></li>
-	    <li><a href="#randompercent">Random: % Success Chance</a></li>
+	        <li><a href="#randompercent">Random: % Success Chance</a></li>
           </ul>
         </div>
       </div>
       <div>
-        <span>+ GUI</span>
+        <span>+ GUI Textbox Input</span>
         <div class="collapse">
           <ul>
             <li><a href="#guigetstring">GUI: Get a string from a textbox</a></li>
             <li><a href="#guigetint">GUI: Get an integer from a textbox</a></li>
             <li><a href="#guigetdbl">GUI: Get a double from a textbox</a></li>
-            <li><a href="#guioutputstring">GUI: Output a string to a label</a></li>
-            <li><a href="#guiradiobuttons">GUI: Radio Buttons</a></li>
             <li><a href="#guigetintvalid">GUI: Get and validate a number</a></li>
             <li><a href="#guigetstrvalid">GUI: Get and validate a string</a></li>
+          </ul>
+        </div>
+      </div>
+	  <div>
+        <span>+ GUI</span>
+        <div class="collapse">
+          <ul>
+            <li><a href="#guioutputstring">GUI: Output a string to a label</a></li>
+            <li><a href="#guiradiobuttons">GUI: Radio Buttons</a></li>
             <li><a href="#guiinitcombobox">GUI: Intialise Dropdown/Combobox</a></li>
             <li><a href="#guiusecombobox">GUI: Use Dropdown/Combobox</a></li>
-	    <li><a href="#guisetupslider">GUI: Setup Slider</a></li>
+	        <li><a href="#guisetupslider">GUI: Setup Slider</a></li>
             <li><a href="#guiopenfiledialog">GUI: Open File Dialog</a></li>
             <li><a href="#guisavefiledialog">GUI: Save File Dialog</a></li>
+			<li><a href="#guibasicmsgbox">GUI: Basic Popup</a></li>
+            <li><a href="#guierrorpopup">GUI: Error Popup</a></li>
+			<li><a href="#guiyesnomsgbox">GUI: Yes/No Popup</a></li>
           </ul>
         </div>
       </div>
@@ -234,8 +245,8 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           <ul>
             <li><a href="#intdoctemplates">Internal Documentation Templates</a></li>
             <li><a href="#menuexample">An example console menu</a></li>
-	    <li><a href="#datetostring">Date To String (Timestamps)</a></li>
-	    <li><a href="#consolecolours">Console Colours</a></li>
+	        <li><a href="#datetostring">Date To String (Timestamps)</a></li>
+	        <li><a href="#consolecolours">Console Colours</a></li>
           </ul>
         </div>
       </div>
@@ -252,9 +263,27 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </span>
       </div>
 
-      <h3>Version: 4.6 --- Last Edited: 14-05-2024</h3>
+      <h3>Version: 4.7 --- Last Edited: 14-05-2024</h3>
       <p>Forgotten how to do something? Look it up in here!</p>
       <br>
+	  
+	  <a id="datatypes"><h3>Data Types</h3></a>
+      <p>Variables have a data type in C#</p>
+      <p>It is important to use the correct data type, examples below:</p>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      int intNum = 1337;  // Integer (whole number, ie: 1, 2, 3)
+      double dblNum = 3.14;  // Double (decimal number ie: 1.34, 3.14)
+      // a float (floating point number) is very similar to a double
+	
+      char chaLetter = 'X';  // Character is a single character, like x, y.
+      // Characters use single quotes, 'X'
+	
+      bool booValid = false;  // Boolean, true or false
+      string strText = "Why hello there";  // String is text, they are in "double quotes"
+        </code></pre>
+      </div>
 
       <a id="variablescope"><h3>Variable Scope</h3></a>
       <p>Variables live within pairs of curly brackets like these {}</p>
@@ -266,24 +295,24 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	private void example()
-	{
-		int intNumA = 0;
+      private void example()
+      {
+        int intNumA = 0;
           
-		// We can access and read/modify intNumA here
+        // We can access and read/modify intNumA here
           
-		for (int i = 0; i &lt; 10; i++)
-		{
-			// We can access intNumA here, because we are still within the original {}'s
-			intNumA = intNumA + 2;
-			i = intNumA * i;
-		}
-	}
+        for (int i = 0; i &lt; 10; i++)
+        {
+          // We can access intNumA here, because we are still within the original {}'s
+          intNumA = intNumA + 2;
+          i = intNumA * i;
+        }
+      }
         
-	private void anotherMethod()
-	{
-		// We cannot see intNumA in here, because it is not within that block of {}'s
-	}
+      private void anotherMethod()
+      {
+        // We cannot see intNumA in here, because it is not within that block of {}'s
+      }
         </code></pre>
       </div>
 
@@ -293,16 +322,27 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	string strOne = "My name is: ";
-	string strTwo = "Bob";
-	Console.WriteLine(strOne + strTwo);
+    // variables
+    string strFirstName = "Bob";
+    string strFamilyName = "Bobbington";
+
+    // method one
+    Console.WriteLine("Your name is " + strFirstName + " " + strFamilyName);
+
+    // method two
+    Console.WriteLine("Your name is {0} {1}", strFirstName, strFamilyName);
+
+    // method three
+    Console.WriteLine($"Your name is {strFirstName} {strFamilyName}");
       </code></pre>
       </div>
       <div class="code-section">
         <pre><code class="nohighlight"><b>
-	Output:
+    Output:
           
-	My name is: Bob
+    Your name is Bob Bobbington
+    Your name is Bob Bobbington
+    Your name is Bob Bobbington
         </b></code></pre>
       </div>
       <br>
@@ -1091,8 +1131,8 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	double dblOne = 3;
-	double dblTwo = 2;
+    double dblOne = 3;
+    double dblTwo = 2;
 
     Console.WriteLine("3^2 = " + Math.Pow(dblOne,dblTwo));
       </code></pre>
@@ -1176,22 +1216,22 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Tosses a coin and decides if you won the coin toss or not
-	public bool CoinToss()
-		{
-			int intResult = RollDie(1, 2);
+      // Tosses a coin and decides if you won the coin toss or not
+      public bool CoinToss()
+      {
+        int intResult = RollDie(1, 2);
 
-			if (intResult == 1)
-			{
-				// won coin toss
-				return true;
-			}
-			else
-			{
-				// lost coin toss
-				return false;
-			}
-		}
+        if (intResult == 1)
+        {
+          // won coin toss
+          return true;
+        }
+        else
+        {
+          // lost coin toss
+          return false;
+        }
+      }
       </code></pre>
       </div>
       <br>
@@ -1214,22 +1254,22 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-	// Purpose: Determines if something with x% succeeds.
-	public bool SuccessPercent(int intPercentageChance)
-		{
-			int intResult = RollDie(1, 100);
+      // Purpose: Determines if something with x% succeeds.
+      public bool SuccessPercent(int intPercentageChance)
+      {
+        int intResult = RollDie(1, 100);
 
-			if (intResult <= intPercentageChance)
-			{
-				// success
-				return true;
-			}
-			else
-			{
-				// fail
-				return false;
-			}
-		}
+        if (intResult <= intPercentageChance)
+        {
+          // success
+          return true;
+        }
+        else
+        {
+          // fail
+          return false;
+        }
+      }
       </code></pre>
       </div>
       <br>
@@ -1278,47 +1318,8 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         your code.
       </p>
       <br>
-
-      <a id="guioutputstring"><h3>GUI: Output a string to a label</h3></a>
-      <div class="code-section">
-        <button class="copy-button">Copy</button>
-        <pre><code>
-      lblOutput.Content = "Your name is " + strName;
-      </code></pre>
-      </div>
-      <p><b>Output on label: </b>Your name is Bob</p>
-      <br>
-
-      <a id="guiradiobuttons"><h3>GUI: Radio Buttons</h3></a>
-      <p>
-        Make sure to set the "GroupName" in the properties. You can also set if
-        one is checked by default with the "IsChecked" value.
-      </p>
-      <p>
-        This example is using a simple 2 Radiobutton setup for a Yes/No. We are
-        outputting to a label called lblOutput.
-      </p>
-      <div class="code-section">
-        <button class="copy-button">Copy</button>
-        <pre><code>
-	if (rbYes.IsChecked == true)
-	{
-		lblOutput.Content = "Yes was selected";
-	}
-	else if (rbNo.IsChecked == true)
-	{
-		lblOutput.Content = "No was selected";
-	}
-	else
-	{
-		lblOutput.Content = "Something went very wrong";
-	}
-      </code></pre>
-      </div>
-      <p>The .IsChecked property is a boolean variable.</p>
-      <br>
-
-      <a id="guigetintvalid"><h3>GUI: Get and validate a number</h3></a>
+	  
+	  <a id="guigetintvalid"><h3>GUI: Get and validate a number</h3></a>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
@@ -1374,6 +1375,45 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <p>
         <b>Output if nothing was entered in the textbox: </b>Please enter a name
       </p>
+      <br>
+
+      <a id="guioutputstring"><h3>GUI: Output a string to a label</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      lblOutput.Content = "Your name is " + strName;
+      </code></pre>
+      </div>
+      <p><b>Output on label: </b>Your name is Bob</p>
+      <br>
+
+      <a id="guiradiobuttons"><h3>GUI: Radio Buttons</h3></a>
+      <p>
+        Make sure to set the "GroupName" in the properties. You can also set if
+        one is checked by default with the "IsChecked" value.
+      </p>
+      <p>
+        This example is using a simple 2 Radiobutton setup for a Yes/No. We are
+        outputting to a label called lblOutput.
+      </p>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	if (rbYes.IsChecked == true)
+	{
+		lblOutput.Content = "Yes was selected";
+	}
+	else if (rbNo.IsChecked == true)
+	{
+		lblOutput.Content = "No was selected";
+	}
+	else
+	{
+		lblOutput.Content = "Something went very wrong";
+	}
+      </code></pre>
+      </div>
+      <p>The .IsChecked property is a boolean variable.</p>
       <br>
 
       <a id="guiinitcombobox"><h3>GUI: Intialise Dropdown/Combobox</h3></a>
@@ -1562,6 +1602,59 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 
             return strRetVal;
         }
+      </code></pre>
+      </div>
+      <br>
+
+      <a id="guibasicmsgbox"><h3>GUI: Basic Popup</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+    // Show a generic popup message
+    public void ShowMsg(string strTitle, string strMsg)
+    {
+      MessageBox.Show(strMsg, strTitle);
+    }
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="guierrorpopup"><h3>GUI: Error Popup</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+    // Generic ErrorPopUp
+    public void ErrorPopUp(string strTitle, string strError)
+    {
+      MessageBox.Show(strError, strTitle, MessageBoxButton.OK, MessageBoxImage.Error);
+    }
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="guiyesnomsgbox"><h3>GUI: Yes/No Popup</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+    // Show a yes/no popup message
+    // Returns false if they click no, true if they click yes
+    // Defaults to the warning messagebox image, but this is chosen by the user if they want
+    public bool YesNoMessageBox(string strMessage, string strTitle, MessageBoxImage mbImage = MessageBoxImage.Warning)
+    {
+      bool booYes;
+      if (MessageBox.Show(strMessage, strTitle, MessageBoxButton.YesNo, mbImage) == MessageBoxResult.Yes)
+      {
+        // User clicks Yes
+        booYes = true;
+      }
+      else
+      {
+        // User clicks No 
+        booYes = false;
+      }
+
+      return booYes;
+    }
       </code></pre>
       </div>
       <br>
