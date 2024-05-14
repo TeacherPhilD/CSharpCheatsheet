@@ -140,6 +140,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
             <li><a href="#combinestrings">Combine strings and output to console</a></li>
             <li><a href="#compstrings">Compare strings (if statements)</a></li>
             <li><a href="#compnums">Compare numbers (if statements)</a></li>
+			<li><a href="#switchstatements">Switch Statements</a></li>
             <li><a href="#maths">Simple Maths</a></li>
             <li><a href="#simplefunction">Simple functions</a></li>
             <li><a href="#forloop">For loop (counted loop)</a></li>
@@ -159,6 +160,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 		    <li><a href="#getstring">Get a string from the user</a></li>
             <li><a href="#getint">Get an integer from the user</a></li>
             <li><a href="#getdouble">Get a double from the user</a></li>
+			<li><a href="#getspecific">Get a specific value from the user</a></li>
 		  </ul>
 		</div>
 	  </div>
@@ -243,6 +245,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
             <li><a href="#intdoctemplates">Internal Documentation Templates</a></li>
             <li><a href="#menuexample">An example console menu</a></li>
 			<li><a href="#datetostring">Date To String (Timestamps)</a></li>
+			<li><a href="#consolecolours">Console Colours</a></li>
           </ul>
         </div>
       </div>
@@ -259,7 +262,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </span>
       </div>
 
-      <h3>Version: 4.6 --- Last Edited: 13-05-2024</h3>
+      <h3>Version: 4.6 --- Last Edited: 14-05-2024</h3>
       <p>Forgotten how to do something? Look it up in here!</p>
       <br>
 
@@ -365,6 +368,51 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           Output:
           
           10 is less than 11
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="switchstatements"><h3>Switch Statements</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	// Switch statements
+	Console.WriteLine("Select beverage:\n1) Coffee\n2) Tea\n3) Soft Drink");
+	Console.Write("Type 1, 2 or 3: ");
+	string strMenuSelection = Console.ReadLine();
+	switch (strMenuSelection)
+	{
+		// based on their selection, switch between these cases
+		case "1":
+			// code for selection
+			Console.WriteLine("Pouring Coffee");
+			break;
+		case "2":
+			// code for selection
+			Console.WriteLine("Pouring Tea");
+			break;
+		case "3":
+			// code for selection
+			Console.WriteLine("Pouring Mountain Dew");
+			break;
+		default:
+			// default behaviour
+			// Sometimes used for errors
+			Console.WriteLine("Pouring Water");
+			break;
+	}
+      </code></pre>
+      </div>
+      <div class="code-section">
+        <pre><code class="nohighlight"><b>
+	Output:
+	
+	Select beverage:
+	1) Coffee
+	2) Tea
+	3) Soft Drink
+	Type 1, 2 or 3: 2
+	Pouring Tea
         </b></code></pre>
       </div>
       <br>
@@ -716,6 +764,60 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p>Copy and paste but change dblNumA to be a more suitable variable name and change the question in the first line.</p>
+      <br>
+	  
+	  <a id="getspecific"><h3>Get a specific value from the user</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	// get specific input
+	// Setup variables outside loop
+	bool booValid = false;
+	string strPizzaSize = "";
+
+	while(booValid == false)
+	{
+		// We are looking for small, medium or large
+		// Let's abbreviate it to 'S', 'M' or 'L'
+		Console.Write("What pizza size do you want?\n(S, M or L): ");
+
+		// .ToUpper() converts the string to capital letters, so 'm' will be "M"
+		string strAnswer = Console.ReadLine().ToUpper(); 
+
+		if(strAnswer == "S" || strAnswer == "M" || strAnswer == "L")
+		{
+			// got a valid answer
+			// convert answer using chained conditional
+			if(strAnswer == "S")
+			{
+				strPizzaSize = "Small";
+			}
+			else if (strAnswer == "M")
+			{
+				strPizzaSize = "Medium";
+			}
+			else if(strAnswer == "L")
+			{
+				strPizzaSize = "Large";
+			}
+			else
+			{
+				strPizzaSize = "error";
+			}
+
+			booValid = true;
+		}
+		else
+		{
+			// error message
+			Console.WriteLine("Must be S, M or L");
+		}
+	}
+
+	Console.WriteLine($"Pizza Size: {strPizzaSize}.");
+      </code></pre>
+      </div>
+      <p>This is a pattern you can change to suit your situation.</p>
       <br>
 	  
 	  <a id="validstringempty"><h3>If string is empty</h3></a>
@@ -1562,6 +1664,31 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           
           12/03/2019 9:43:22 AM
         </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="consolecolours"><h3>Console Colours</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+	// Console colours
+	// Sets the foreground and the background colors of the console
+	Console.ForegroundColor = ConsoleColor.Black;
+	Console.BackgroundColor = ConsoleColor.White;
+
+	// After colour values are set, use Console.Clear() to apply it
+	Console.Clear();
+
+	// These lines will have Black text on White background
+	Console.WriteLine($"Background: {Console.BackgroundColor}");
+	Console.WriteLine($"Foreground: {Console.ForegroundColor}");
+
+	// Console.ResetColor resets the console back to the default foreground and background colors
+	Console.ResetColor();
+            
+	// This line will be back to standard foreground/background coloirs
+	Console.WriteLine("Back to standard console colours");
+      </code></pre>
       </div>
       <br>
 	  
