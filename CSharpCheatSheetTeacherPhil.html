@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>C# Cheat Sheet v1.0-RC1</title>
+    <title>C# Cheat Sheet v1.0-RC2</title>
     <style>
 
 :root {
@@ -136,11 +136,14 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ Core concepts</span>
         <div class="collapse">
           <ul>
+            <li><a href="#commentssingle">Code Comments Single Line</a></li>
+            <li><a href="#commentsmulti">Code Comments Multi Line</a></li>
             <li><a href="#datatypes">Data Types</a></li>
             <li><a href="#variablescope">Variable Scope</a></li>
             <li><a href="#combinestrings">Combine strings and output to console</a></li>
             <li><a href="#compstrings">Compare strings (if statements)</a></li>
             <li><a href="#compnums">Compare numbers (if statements)</a></li>
+            <li><a href="#compcomplex">Complex Comparisons (if statements)</a></li>
             <li><a href="#switchstatements">Switch Statements</a></li>
             <li><a href="#maths">Simple Maths</a></li>
             <li><a href="#simplefunction">Simple functions</a></li>
@@ -211,7 +214,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </div>
       </div>
       <div>
-        <span>+ GUI Textbox Input</span>
+        <span>+ GUI (WPF) Textbox Input</span>
         <div class="collapse">
           <ul>
             <li><a href="#guigetstring">GUI: Get a string from a textbox</a></li>
@@ -223,7 +226,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </div>
       </div>
 	  <div>
-        <span>+ GUI</span>
+        <span>+ GUI (WPF)</span>
         <div class="collapse">
           <ul>
             <li><a href="#guioutputstring">GUI: Output a string to a label</a></li>
@@ -263,9 +266,42 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </span>
       </div>
 
-      <h3>v1.0-RC1 --- Last Edited: 15-05-2024</h3>
+      <h3>v1.0-RC2 --- Last Edited: 20-05-2024</h3>
       <p>Forgotten how to do something? Look it up in here!</p>
       <br>
+	  
+	  <h3>Core Concepts</h3>
+	  <hr />
+	  <br />
+	  
+	  <a id="commentssingle"><h3>Code Comments Single Line</h3></a>
+      <p>Comments are used by developers to explain and give context to code. Comments are also used to help readability of code. Comments are also used to prevent  It can also be used to prevent execution (see fourth line in code box), this "commenting out" is often used for debugging and testing.</p>
+      <p>To start a single line comment use "//"</p>
+      <p>Text after "//" until the end of the line is ignored by the C# compiler.</p>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      // single line comment
+      Console.WriteLine("Comment above");
+      Console.WriteLine("Comment same line"); // Also a single line comment
+      //Console.WriteLine("This is commented so wont run");
+        </code></pre>
+      </div>
+	  
+	  <a id="commentsmulti"><h3>Code Comments Multi Line</h3></a>
+      <p>All text between the start "/*" and end "*/" will be treated like a comment and ignored by the C# compiler.</p>
+      <p>This is very useful for quickly commenting large sections.</p>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      /* Multi line comments
+      can go over
+      multiple lines
+      Console.WriteLine("This is commented out");
+      */
+      Console.WriteLine("This is not commented out");
+        </code></pre>
+      </div>
 	  
 	  <a id="datatypes"><h3>Data Types</h3></a>
       <p>Variables have a data type in C#</p>
@@ -398,6 +434,67 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Output:
           
       10 is less than 11
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="compcomplex"><h3>Complex Comparisons (if statements)</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      // Complex Comparisons
+      // "&&" means AND
+      // All conditions must be true
+      int intNumA = 6;
+      int intNumB = 7;
+
+      if (intNumA &lt; 10 && intNumB &lt; 10)
+      {
+        // intNumA is less than 10 AND intNumB is less than 10
+        // Both are true so this will show:
+        Console.WriteLine("Both numbers are less than 10");
+      }
+      else
+      {
+        Console.WriteLine("One or both conditions are false");
+      }
+
+      // "||" means OR
+      // Only one condition must be true
+
+      if(intNumA == 6 || intNumB == 8)
+      {
+        // intNumA == 6 is true
+        // intNumB == 8 is false
+        // One is true, therefore this will show:
+        Console.WriteLine("Condition 1 is true, Condition 2 is false");
+      }
+      else
+      {
+        Console.WriteLine("Neither statement is true");
+      }
+
+      // "!=" means NOT Equal to
+            
+      if(intNumA != intNumB)
+      {
+        // This condition evaluates as true
+        // These two numbers are not equal to eachother
+        Console.WriteLine("intNumA is not equal to intNumB");
+      }
+      else
+      {
+        Console.WriteLine("intNumA is equal to intNumB");
+      }
+      </code></pre>
+      </div>
+      <div class="code-section">
+        <pre><code class="nohighlight"><b>
+      Output:
+          
+      Both numbers are less than 10
+      Condition 1 is true, Condition 2 is false
+      intNumA is not equal to intNumB
         </b></code></pre>
       </div>
       <br>
@@ -701,7 +798,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           Console.Write("The value must be an integer, try again: ");
         }
 
-        if (intNum >= intMin && intNum &lt;= intMax)
+        if (intNum &gt;= intMin && intNum &lt;= intMax)
         {
           // number is between intMin and intMax inclusive
           booNumCheck = false;
@@ -743,6 +840,10 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <br>
+	  
+	  <h3>Console Input</h3>
+	  <hr />
+	  <br />
 	  
 	  <a id="getstring"><h3>Get a string from the user</h3></a>
       <div class="code-section">
@@ -848,6 +949,10 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <p>This is a pattern you can change to suit your situation.</p>
       <br>
 	  
+	  <h3>Validation</h3>
+	  <hr />
+	  <br />
+	  
 	  <a id="validstringempty"><h3>If string is empty</h3></a>
       <div class="code-section">
         <button class="copy-button">Copy</button>
@@ -905,7 +1010,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       {
         bool booNumInRange = true;
         // With this logic, we accept the number (don't turn booNumInRange to false) if it is between intMin-intMax inclusive.
-        if (intIn < intMin || intIn > intMax)
+        if (intIn &lt; intMin || intIn &gt; intMax)
         {
           booNumInRange = false;
         }
@@ -928,6 +1033,10 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <br>
+	  
+	  <h3>Files</h3>
+	  <hr />
+	  <br />
 
       <a id="filesetuppath"><h3>FILES: Setup filename</h3></a>
       <div class="code-section">
@@ -1098,8 +1207,12 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <br>
+	  
+	  <h3>Maths</h3>
+	  <hr />
+	  <br />
 
-      <a id="roundingdoubles"><h3>Math: Rounding</h3></a>
+      <a id="roundingdoubles"><h3>Maths: Rounding</h3></a>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
@@ -1192,6 +1305,10 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </div>
       <br>
 
+      <h3>Random</h3>
+	  <hr />
+	  <br />
+
       <a id="randomnumbers"><h3>Random Numbers</h3></a>
       <div class="code-section">
         <button class="copy-button">Copy</button>
@@ -1257,7 +1374,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       {
         int intResult = RollDie(1, 100);
 
-        if (intResult <= intPercentageChance)
+        if (intResult &lt;= intPercentageChance)
         {
           // success
           return true;
@@ -1271,6 +1388,10 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <br>
+	  
+	  <h3>GUI Textbox Input</h3>
+	  <hr />
+	  <br />
 
       <a id="guigetstring"><h3>GUI: Get a string from a textbox</h3></a>
       <div class="code-section">
@@ -1326,7 +1447,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 
       bool booNumInRange = true;
       // With this logic, we accept the number (don't turn booNumInRange to false) if it is between 1-100 inclusive.
-      if(intPokeLvl &lt;= 0 || intPokeLvl > 100)
+      if(intPokeLvl &lt;= 0 || intPokeLvl &gt; 100)
       {
         booNumInRange = false;
       }
@@ -1374,6 +1495,10 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <b>Output if nothing was entered in the textbox: </b>Please enter a name
       </p>
       <br>
+	  
+	  <h3>GUI (WPF)</h3>
+	  <hr />
+	  <br />
 
       <a id="guioutputstring"><h3>GUI: Output a string to a label</h3></a>
       <div class="code-section">
@@ -1451,6 +1576,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <br>
 	  
 	  <a id="guisetupslider"><h3>GUI: Setup Slider</h3></a>
+	  <p>Here is a full example of a function to configure a slider and how to use it. You will need to make a WPF slider and a Textbox, I used the names "sliGeneric" and "txtSlider" respectively.</p>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
@@ -1505,7 +1631,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 
       // Responds to enter being pressed in the textbox
       // To get to work: Add KeyDown="OnKeyDownHandler" to the textbox in the xaml
-      // ie: <TextBox x:Name="txtSlider" HorizontalAlignment="Left" Height="23" Margin="334,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="OnKeyDownHandler"/>
+      // ie: &lt;TextBox x:Name="txtSlider" HorizontalAlignment="Left" Height="23" Margin="334,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="OnKeyDownHandler"/&gt;
       private void OnKeyDownHandler(object sender, KeyEventArgs e)
       {
         if (e.Key == Key.Return)
@@ -1518,7 +1644,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 
           bool booNumInRange = true;
           // With this logic, we accept the number (don't turn booNumInRange to false) if it is between 1-100 inclusive.
-          if (intSliderValue <= sliGeneric.Minimum || intSliderValue > sliGeneric.Maximum)
+          if (intSliderValue &lt;= sliGeneric.Minimum || intSliderValue &gt; sliGeneric.Maximum)
           {
             booNumInRange = false;
           }
@@ -1656,6 +1782,10 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <br>
+	  
+	  <h3>Other</h3>
+	  <hr />
+	  <br />
 
       <a id="intdoctemplates"><h3>Internal Documentation Templates</h3></a>
 	  <p>Function Headers:</p>
