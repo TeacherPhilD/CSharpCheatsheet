@@ -5,6 +5,12 @@ Resource full of examples of basic C# things. Raise an issue if you want anythin
 
 **ChangeLog**  
 **Pre-Release**  
+**v1.0-RC2**  
+- Used escape character for < and >
+- Added complex comparisons (&&, ||, !=)
+- Improved context in some areas
+- Added section headers  
+
 **v1.0-RC1**  
 - Standardised code indentation
 
