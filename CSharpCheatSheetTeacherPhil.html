@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>C# Cheat Sheet v1.0-RC2</title>
+    <title>C# Cheat Sheet v1.0-RC4</title>
     <style>
 
 :root {
@@ -136,24 +136,38 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ Core concepts</span>
         <div class="collapse">
           <ul>
-            <li><a href="#commentssingle">Code Comments Single Line</a></li>
-            <li><a href="#commentsmulti">Code Comments Multi Line</a></li>
-            <li><a href="#datatypes">Data Types</a></li>
-            <li><a href="#variablescope">Variable Scope</a></li>
-            <li><a href="#combinestrings">Combine strings and output to console</a></li>
-            <li><a href="#compstrings">Compare strings (if statements)</a></li>
-            <li><a href="#compnums">Compare numbers (if statements)</a></li>
-            <li><a href="#compcomplex">Complex Comparisons (if statements)</a></li>
-            <li><a href="#switchstatements">Switch Statements</a></li>
-            <li><a href="#maths">Simple Maths</a></li>
-            <li><a href="#simplefunction">Simple functions</a></li>
-            <li><a href="#forloop">For loop (counted loop)</a></li>
-            <li><a href="#whileloop">While loop (uncounted loop)</a></li>
-            <li><a href="#array">Declare/Initialise an Array</a></li>
-            <li><a href="#arrayvalues">Assigning Values to Array Elements</a></li>
-            <li><a href="#arrayaccess">Accessing Array Elements</a></li>
-            <li><a href="#consolechecknum">Simple number validation</a></li>
-            <li><a href="#trycatchblock">Try/Catch Block</a></li>
+            <li><a href="#commentssingle">- Code Comments Single Line</a></li>
+            <li><a href="#commentsmulti">- Code Comments Multi Line</a></li>
+            <li><a href="#datatypes">- Data Types</a></li>
+            <li><a href="#variablescope">- Variable Scope</a></li>
+            <li><a href="#combinestrings">- Combine strings and output to console</a></li>
+            <li><a href="#compstrings">- Compare strings (if statements)</a></li>
+            <li><a href="#compnums">- Compare numbers (if statements)</a></li>
+            <li><a href="#compcomplex">- Complex Comparisons (if statements)</a></li>
+            <li><a href="#switchstatements">- Switch Statements</a></li>
+            <li><a href="#maths">- Simple Maths</a></li>
+            <li><a href="#simplefunction">- Simple functions</a></li>
+            <li><a href="#forloop">- For loop (counted loop)</a></li>
+            <li><a href="#whileloop">- While loop (uncounted loop)</a></li>
+            <li><a href="#array">- Declare/Initialise an Array</a></li>
+            <li><a href="#arrayvalues">- Assigning Values to Array Elements</a></li>
+            <li><a href="#arrayaccess">- Accessing Array Elements</a></li>
+            <li><a href="#consolechecknum">- Simple number validation</a></li>
+            <li><a href="#trycatchblock">- Try/Catch Block</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <span>+ Strings</span>
+        <div class="collapse">
+          <ul>
+            <li><a href="#findstringlength">- Length of a string</a></li>
+            <li><a href="#stringupper">- Make a string ALL UPPER CASE</a></li>
+            <li><a href="#stringlower">- Make a string all lower case</a></li>
+            <li><a href="#stringindex">- Access individual characters by index</a></li>
+            <li><a href="#stringstartswith">- Check if a string begins with a given string</a></li>
+            <li><a href="#stringcontains">- Check if a string contains a given string</a></li>
+            <li><a href="#stringsub">- Get a substring from a string</a></li>
           </ul>
         </div>
       </div>
@@ -161,21 +175,21 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ Console Input</span>
         <div class="collapse">
           <ul>
-		    <li><a href="#getstring">Get a string from the user</a></li>
-            <li><a href="#getint">Get an integer from the user</a></li>
-            <li><a href="#getdouble">Get a double from the user</a></li>
-            <li><a href="#getspecific">Get a specific value from the user</a></li>
+		    <li><a href="#getstring">- Get a string from the user</a></li>
+            <li><a href="#getint">- Get an integer from the user</a></li>
+            <li><a href="#getdouble">- Get a double from the user</a></li>
+            <li><a href="#getspecific">- Get a specific value from the user</a></li>
           </ul>
         </div>
       </div>
       <div>
-        <span>+ Validation</span>
+        <span>+ Validation Functions</span>
         <div class="collapse">
           <ul>
-            <li><a href="#validstringempty">If string is empty</a></li>
-            <li><a href="#validstringnum">If string is number</a></li>
-            <li><a href="#validnuminrange">If number is in a range</a></li>
-            <li><a href="#validstringsequal">If 2 strings are the same</a></li>
+            <li><a href="#validstringempty">- If string is empty</a></li>
+            <li><a href="#validstringnum">- If string is number</a></li>
+            <li><a href="#validnuminrange">- If number is in a range</a></li>
+            <li><a href="#validstringsequal">- If 2 strings are the same</a></li>
           </ul>
         </div>
       </div>
@@ -183,11 +197,11 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ Files</span>
         <div class="collapse">
           <ul>
-            <li><a href="#filesetuppath">FILES: Setup filename</a></li>
-            <li><a href="#filedelete">FILES: Delete</a></li>
-            <li><a href="#filewrite">FILES: Write</a></li>
-            <li><a href="#fileread">FILES: Read</a></li>
-            <li><a href="#fileappend">FILES: Append</a></li>
+            <li><a href="#filesetuppath">- Files: Setup filename</a></li>
+            <li><a href="#filedelete">- Files: Delete</a></li>
+            <li><a href="#filewrite">- Files: Write</a></li>
+            <li><a href="#fileread">- Files: Read</a></li>
+            <li><a href="#fileappend">- Files: Append</a></li>
           </ul>
         </div>
       </div>
@@ -195,10 +209,10 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ Maths</span>
         <div class="collapse">
           <ul>
-            <li><a href="#roundingdoubles">Maths: Rounding</a></li>
-            <li><a href="#mathspower">Maths: Power</a></li>
-            <li><a href="#mathssqrt">Maths: Square Root</a></li>
-            <li><a href="#mathsmaxmin">Maths: Max/Min</a></li>
+            <li><a href="#roundingdoubles">- Maths: Rounding</a></li>
+            <li><a href="#mathspower">- Maths: Power</a></li>
+            <li><a href="#mathssqrt">- Maths: Square Root</a></li>
+            <li><a href="#mathsmaxmin">- Maths: Max/Min</a></li>
           </ul>
         </div>
       </div>
@@ -206,10 +220,10 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ Random</span>
         <div class="collapse">
           <ul>
-	        <li><a href="#randomnumbers">Random Numbers</a></li>
-            <li><a href="#randomcointoss">Random: Coin Toss</a></li>
-            <li><a href="#randomdice">Random: Roll x-sided Dice</a></li>
-	        <li><a href="#randompercent">Random: % Success Chance</a></li>
+	        <li><a href="#randomnumbers">- Random Numbers</a></li>
+            <li><a href="#randomcointoss">- Random: Coin Toss</a></li>
+            <li><a href="#randomdice">- Random: Roll x-sided Dice</a></li>
+	        <li><a href="#randompercent">- Random: % Success Chance</a></li>
           </ul>
         </div>
       </div>
@@ -217,11 +231,11 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ GUI (WPF) Textbox Input</span>
         <div class="collapse">
           <ul>
-            <li><a href="#guigetstring">GUI: Get a string from a textbox</a></li>
-            <li><a href="#guigetint">GUI: Get an integer from a textbox</a></li>
-            <li><a href="#guigetdbl">GUI: Get a double from a textbox</a></li>
-            <li><a href="#guigetintvalid">GUI: Get and validate a number</a></li>
-            <li><a href="#guigetstrvalid">GUI: Get and validate a string</a></li>
+            <li><a href="#guigetstring">- GUI: Get a string from a textbox</a></li>
+            <li><a href="#guigetint">- GUI: Get an integer from a textbox</a></li>
+            <li><a href="#guigetdbl">- GUI: Get a double from a textbox</a></li>
+            <li><a href="#guigetintvalid">- GUI: Get and validate a number</a></li>
+            <li><a href="#guigetstrvalid">- GUI: Get and validate a string</a></li>
           </ul>
         </div>
       </div>
@@ -229,16 +243,18 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ GUI (WPF)</span>
         <div class="collapse">
           <ul>
-            <li><a href="#guioutputstring">GUI: Output a string to a label</a></li>
-            <li><a href="#guiradiobuttons">GUI: Radio Buttons</a></li>
-            <li><a href="#guiinitcombobox">GUI: Intialise Dropdown/Combobox</a></li>
-            <li><a href="#guiusecombobox">GUI: Use Dropdown/Combobox</a></li>
-	        <li><a href="#guisetupslider">GUI: Setup Slider</a></li>
-            <li><a href="#guiopenfiledialog">GUI: Open File Dialog</a></li>
-            <li><a href="#guisavefiledialog">GUI: Save File Dialog</a></li>
-			<li><a href="#guibasicmsgbox">GUI: Basic Popup</a></li>
-            <li><a href="#guierrorpopup">GUI: Error Popup</a></li>
-			<li><a href="#guiyesnomsgbox">GUI: Yes/No Popup</a></li>
+            <li><a href="#guioutputstring">- GUI: Output a string to a label</a></li>
+            <li><a href="#guicheckbox">- GUI: Checkboxes</a></li>
+            <li><a href="#guiradiobuttons">- GUI: Radio Buttons</a></li>
+            <li><a href="#guiinitcombobox">- GUI: Intialise Dropdown/Combobox</a></li>
+            <li><a href="#guiusecombobox">- GUI: Use Dropdown/Combobox</a></li>
+            <li><a href="#guiusecomboboxindex">- GUI: Use Dropdown/Combobox (Index Method)</a></li>
+	        <li><a href="#guisetupslider">- GUI: Setup Slider</a></li>
+            <li><a href="#guiopenfiledialog">- GUI: Open File Dialog</a></li>
+            <li><a href="#guisavefiledialog">- GUI: Save File Dialog</a></li>
+			<li><a href="#guibasicmsgbox">- GUI: Basic Popup</a></li>
+            <li><a href="#guierrorpopup">- GUI: Error Popup</a></li>
+			<li><a href="#guiyesnomsgbox">- GUI: Yes/No Popup</a></li>
           </ul>
         </div>
       </div>
@@ -246,10 +262,11 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ Other</span>
         <div class="collapse">
           <ul>
-            <li><a href="#intdoctemplates">Internal Documentation Templates</a></li>
-            <li><a href="#menuexample">An example console menu</a></li>
-	        <li><a href="#datetostring">Date To String (Timestamps)</a></li>
-	        <li><a href="#consolecolours">Console Colours</a></li>
+            <li><a href="#intdoctemplates">- Internal Documentation Templates</a></li>
+            <li><a href="#menuexample">- An example console menu</a></li>
+	        <li><a href="#datetostring">- Date To String (Timestamps)</a></li>
+	        <li><a href="#consolecolours">- Console Colours</a></li>
+            <li><a href="#consolenostatic">- Console Projects Anti-Static Trick</a></li>
           </ul>
         </div>
       </div>
@@ -266,7 +283,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </span>
       </div>
 
-      <h3>v1.0-RC2 --- Last Edited: 20-05-2024</h3>
+      <h3>v1.0-RC4 --- Last Edited: 29-05-2024</h3>
       <p>Forgotten how to do something? Look it up in here!</p>
       <br>
 	  
@@ -397,6 +414,9 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       {
         Console.WriteLine("Sorry...");
       }
+	  
+      // alternative:
+      // if(strName == "Awesome")
       </code></pre>
       </div>
       <div class="code-section">
@@ -415,15 +435,15 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       int intNumA = 10;
       int intNumB = 11;
       
-      if (intNumA == intNumB)
+      if (intNumA == intNumB) // equal to
       {
         Console.WriteLine("The numbers are the same");
       }
-      else if (intNumA &lt; intNumB)
+      else if (intNumA &lt; intNumB) // less than
       {
         Console.WriteLine(intNumA + " is less than " + intNumB);
       }
-      else if (intNumA > intNumB)
+      else if (intNumA > intNumB) // greater than
       {
         Console.WriteLine(intNumA + " is more than " + intNumB);
       }
@@ -509,17 +529,19 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       string strMenuSelection = Console.ReadLine();
       switch (strMenuSelection)
       {
-        // based on their selection, switch between these cases
+        /* based on their selection, switch between these cases
+           This example is just printing to console to keep things simple
+           Usually you'd want to use a method/function */
         case "1":
-          // code for selection
+          // 1 (Coffee) was selected
           Console.WriteLine("Pouring Coffee");
-          break;
+          break; // every case must have a break to mark the end
         case "2":
-          // code for selection
+          // 2 (Tea) was selected
           Console.WriteLine("Pouring Tea");
           break;
         case "3":
-          // code for selection
+          // 3 (Soft Drink) was selected
           Console.WriteLine("Pouring Mountain Dew");
           break;
         default:
@@ -609,7 +631,8 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <br>
 
       <a id="forloop"><h3>For loop (counted loop)</h3></a>
-      <div class="code-section">
+	  <p>A for loop repeats code in {}'s a specified amount of iterations.</p>
+	  <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
       for (int i = 0; i &lt; 10; i++)
@@ -634,9 +657,20 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       i = 9 and intTemp = 18
         </b></code></pre>
       </div>
+	  <p>for <b>(int i = 0; i &lt; 10; i++)</b> Inside the brackets are 3 statements separated by ";"</p>
+	  <br />
+	  <p><b>int i = 0;</b> This statement sets up our counting variable.</p>
+	  <p>By convention, this variable is called i (then j, k etc...)</p>
+	  <br />
+	  <p><b>i &lt; 10;</b> This is our condition.</p>
+	  <p>We will keep repeating the code in {}'s until it is false.</p>
+	  <br />
+	  <p><b>i++;</b> This is what happens after each iteration of the loop.</p>
+	  <p>In this case (i++), we are incrementing i by 1 each time.</p>
       <br>
 
       <a id="whileloop"><h3>While loop (uncounted loop)</h3></a>
+	  <p>A while loop repeats the code in {}'s whilst the condition in ()'s evaluates to true.</p>
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
@@ -838,6 +872,142 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         Console.WriteLine(excpFile.ToString());
       }
       </code></pre>
+      </div>
+      <br>
+	  
+      <h3>Strings</h3>
+      <hr />
+      <br />
+	  
+      <a id="findstringlength"><h3>Length of a string</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      string strName = "Fred";
+      Console.WriteLine("Length (in characters) of strName: " + strName.Length);
+        </code></pre>
+      </div>
+	  <div class="code-section">
+        <pre><code class="nohighlight"><b>
+      Length (in characters) of strName: 4
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="stringupper"><h3>Make a string ALL UPPER CASE</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      string stringName = "Fred";
+      Console.WriteLine(stringName.ToUpper()); // Outputs "FRED"
+        </code></pre>
+      </div>
+	  <div class="code-section">
+        <pre><code class="nohighlight"><b>
+      FRED
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="stringlower"><h3>Make a string all lower case</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      string stringName = "Fred";
+      Console.WriteLine(stringName.ToLower());   // Outputs "fred"
+        </code></pre>
+      </div>
+	  <div class="code-section">
+        <pre><code class="nohighlight"><b>
+      fred
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="stringindex"><h3>Access individual characters by index</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      string strName = "Fred";
+      Console.WriteLine(strName[0]); // Outputs "F"
+      Console.WriteLine(strName[1]); // Outputs "r"
+        </code></pre>
+      </div>
+	  <div class="code-section">
+        <pre><code class="nohighlight"><b>
+      F
+      r
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="stringstartswith"><h3>Check if a string begins with a given string</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      string strTruck = "Truck";
+      string strTrucker = "Trucker";
+      string strBus = "Bus";
+
+      Console.WriteLine($"{strTrucker} starts with {strTruck}: {strTrucker.StartsWith(strTruck)}");
+      Console.WriteLine($"{strBus} starts with {strTruck}: {strBus.StartsWith(strTruck)}");
+        </code></pre>
+      </div>
+	  <div class="code-section">
+        <pre><code class="nohighlight"><b>
+      Trucker starts with Truck: True
+      Bus starts with Truck: False
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="stringcontains"><h3>Check if a string contains a given string</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      string strTruck = "Truck";
+      string strTrucker = "Trucker";
+      string strBus = "Bus";
+
+      bool booContainsTruck = strTrucker.Contains(strTruck);
+      bool booContainsBus = strTrucker.Contains(strBus);
+
+      Console.WriteLine($"{strTrucker} contains {strTruck}: {booContainsTruck}");
+      Console.WriteLine($"{strTrucker} contains {strBus}: {booContainsBus}");
+        </code></pre>
+      </div>
+	  <div class="code-section">
+        <pre><code class="nohighlight"><b>
+      Trucker contains Truck: True
+      Trucker contains Bus: False
+        </b></code></pre>
+      </div>
+      <br>
+	  
+	  <a id="stringsub"><h3>Get a substring from a string</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      /* 
+       * A substring is a string inside of a string
+       * Substring has two overloads:
+       * Substring(int) - Returns the substring from the specified index to the end of the string.
+       * Substring(int, int) - Returns the substring from the specified index for the specified length.
+       * 
+       * Remember the index is just like arrays: starts at 0
+       */
+
+      string strInput = "Sega Dreamcast";
+
+      Console.WriteLine(strInput.Substring(2, 2)); // will display "ga"
+      Console.WriteLine(strInput.Substring(5)); // will display "Dreamcast"
+        </code></pre>
+      </div>
+	  <div class="code-section">
+        <pre><code class="nohighlight"><b>
+      ga
+      Dreamcast
+        </b></code></pre>
       </div>
       <br>
 	  
@@ -1347,6 +1517,13 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           return false;
         }
       }
+	  
+      public int RollDie(int intMin, int intMax)
+      {
+        // Purpose: Customisable dice roll, ie: d6 use intMin as 1 and intMax as 6
+        intMax++; // needs to be one more because of weird way random.Next works
+        return rngGen.Next(intMin, intMax);
+      }
       </code></pre>
       </div>
       <br>
@@ -1384,6 +1561,13 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           // fail
           return false;
         }
+      }
+	  
+	  public int RollDie(int intMin, int intMax)
+      {
+        // Purpose: Customisable dice roll, ie: d6 use intMin as 1 and intMax as 6
+        intMax++; // needs to be one more because of weird way random.Next works
+        return rngGen.Next(intMin, intMax);
       }
       </code></pre>
       </div>
@@ -1509,11 +1693,39 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </div>
       <p><b>Output on label: </b>Your name is Bob</p>
       <br>
+	  
+	  <a id="guicheckbox"><h3>GUI: Checkbox</h3></a>
+      <p>
+        Checkboxes are either "checked" (aka ticked) or not.
+		The IsChecked value is true when ticked.
+		You can check it (==) or set it (=).
+		This example checks it.
+      </p>
+      <p>
+        This simple example uses a checkbox called chkFast that displays "Fast".
+      </p>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      if (chkFast.IsChecked == true)
+      {
+        // checkbox is ticked
+        lblOutput.Content = "You are fast";
+      }
+      else
+      {
+        // checkbox is unticked
+        lblOutput.Content = "You are slow";
+      }
+      </code></pre>
+      </div>
+      <p>The .IsChecked property is a boolean variable.</p>
+      <br>
 
       <a id="guiradiobuttons"><h3>GUI: Radio Buttons</h3></a>
       <p>
-        Make sure to set the "GroupName" in the properties. You can also set if
-        one is checked by default with the "IsChecked" value.
+        Make sure to set the "GroupName" in the properties to link radiobuttons.
+        You can also set one to checked by default with the "IsChecked" value.
       </p>
       <p>
         This example is using a simple 2 Radiobutton setup for a Yes/No. We are
@@ -1573,6 +1785,27 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p><b>Output if Option 1 selected: </b>You chose: Option 1</p>
+      <br>
+	  
+	  <a id="guiusecomboboxindex"><h3>GUI: Use Dropdown/Combobox (Index Method)</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      int intSelectedIndex = cmbExample.SelectedIndex;
+      
+      if(intSelectedIndex == 0)
+      {
+        // first option
+        lblOutput.Content = "You chose the first option";
+      }
+      else if(intSelectedIndex == 1)
+      {
+        // second option
+        lblOutput.Content = "You chose the second option";
+      }
+      </code></pre>
+      </div>
+      <p>You can imagine a combobox as an array. The first (top) item is index 0.</p>
       <br>
 	  
 	  <a id="guisetupslider"><h3>GUI: Setup Slider</h3></a>
@@ -1899,6 +2132,25 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
             
       // This line will be back to standard foreground/background colours
       Console.WriteLine("Back to standard console colours");
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="consolenostatic"><h3>Console Projects Anti-Static Trick</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      static void Main(string[] args)
+      {
+        // anti-static trick
+        Program pro = new Program();
+        pro.StartTests();
+      }
+	  
+      private void Driver()
+      {
+        // start writing your program
+      }
       </code></pre>
       </div>
       <br>
