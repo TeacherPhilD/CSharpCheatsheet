@@ -5,6 +5,16 @@ Resource full of examples of basic C# things. Raise an issue if you want anythin
 
 **ChangeLog**  
 **Pre-Release**  
+
+**v1.0-RC4**
+- Neatening
+
+**v1.0-RC3**
+- Added string section
+- Added anti-static trick
+- General Cleanup
+- Added comments  
+
 **v1.0-RC2**  
 - Used escape character for < and >
 - Added complex comparisons (&&, ||, !=)
