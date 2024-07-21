@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>C# Cheat Sheet v1.0-RC4</title>
+    <title>C# Cheat Sheet v1.0</title>
     <style>
 
 :root {
@@ -139,6 +139,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
             <li><a href="#commentssingle">- Code Comments Single Line</a></li>
             <li><a href="#commentsmulti">- Code Comments Multi Line</a></li>
             <li><a href="#datatypes">- Data Types</a></li>
+			<li><a href="#declarevariable">- Declare Variable</a></li>
             <li><a href="#variablescope">- Variable Scope</a></li>
             <li><a href="#combinestrings">- Combine strings and output to console</a></li>
             <li><a href="#compstrings">- Compare strings (if statements)</a></li>
@@ -283,7 +284,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </span>
       </div>
 
-      <h3>v1.0-RC4 --- Last Edited: 29-05-2024</h3>
+      <h3>v1.0 --- Last Edited: 21-07-2024</h3>
       <p>Forgotten how to do something? Look it up in here!</p>
       <br>
 	  
@@ -335,6 +336,23 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 	
       bool booValid = false;  // Boolean, true or false
       string strText = "Why hello there";  // String is text, they are in "double quotes"
+        </code></pre>
+      </div>
+	  
+	  <a id="declarevariable"><h3>Declare Variable</h3></a>
+      <p>To declare a variable start with the Data Type (ie: string) followed by a good name.</p>
+	  <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      int intNum = 1337;  // declaring an integer variable
+        </code></pre>
+      </div>
+      <p>You only need to use the data type when declaring, when using the variable just refer to the name.</p>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      int intNum = 1337;  // declaring an integer variable
+      Console.WriteLine($"Number is: {intNum}"); // using the variable
         </code></pre>
       </div>
 
@@ -605,7 +623,8 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="code-section">
         <button class="copy-button">Copy</button>
         <pre><code>
-      static void Main(string[] args)
+      // Please note that you may or may not need static
+	  static void Main(string[] args)
       {
         int intSumA = 10;
         int intSumB = 20;
@@ -866,6 +885,8 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       try
       {
         // dangerous code here!
+        // dangerous code is code that might cause a crash
+        // ie: related to networks or files
       }
       catch (Exception excpFile)
       {
