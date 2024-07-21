@@ -3,7 +3,11 @@ Made by [Teacher Phil](https://github.com/TeacherPhilD) / some code magic by [JS
 
 Resource full of examples of basic C# things. Raise an issue if you want anything added.
 
-**ChangeLog**  
+**ChangeLog**
+**v1.0-Release**
+- General sweep: comments, cleanups, minor additions
+- Ready to release!
+
 **Pre-Release**  
 
 **v1.0-RC4**
