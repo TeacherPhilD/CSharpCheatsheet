@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>C# Cheat Sheet v1.0</title>
+    <title>C# Cheat Sheet v1.1</title>
     <style>
 
 :root {
@@ -256,6 +256,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 			<li><a href="#guibasicmsgbox">- GUI: Basic Popup</a></li>
             <li><a href="#guierrorpopup">- GUI: Error Popup</a></li>
 			<li><a href="#guiyesnomsgbox">- GUI: Yes/No Popup</a></li>
+			<li><a href="#guishowimage">- GUI: Show an Image</a></li>
           </ul>
         </div>
       </div>
@@ -284,7 +285,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </span>
       </div>
 
-      <h3>v1.0 --- Last Edited: 21-07-2024</h3>
+      <h3>v1.1 --- Last Edited: 31-07-2024</h3>
       <p>Forgotten how to do something? Look it up in here!</p>
       <br>
 	  
@@ -2032,6 +2033,25 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         }
 
         return booYes;
+      }
+      </code></pre>
+      </div>
+      <br>
+	  
+	  <a id="guishowimage"><h3>GUI: Show an Image</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      private void SetImage(string strFilePath)
+      {
+        // prepare image
+        Uri uriImage = new Uri(strFilePath, UriKind.Absolute);
+        // depending on the file path, you might need to change to UriKind.Relative
+		
+        // change the image
+        imgPrimaryImage.Source = new BitmapImage(uriImage);
+		
+        // imgPrimaryImage is the name of the image GUI object
       }
       </code></pre>
       </div>
