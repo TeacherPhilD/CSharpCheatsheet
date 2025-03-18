@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>C# Cheat Sheet v1.1</title>
+    <title>C# Cheat Sheet v1.2</title>
     <style>
 
 :root {
@@ -260,6 +260,30 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           </ul>
         </div>
       </div>
+	  <div>
+        <span>+ OOP</span>
+        <div class="collapse">
+          <ul>
+            <li><a href="#oopconcepts">- OOP Concepts</a></li>
+            <li><a href="#oopbaseclass">- Defining a Base Class</a></li>
+	        <li><a href="#oopinheriting">- Inheriting from a Class</a></li>
+	        <li><a href="#oopencapsulationpoly">- Encapsulation and Polymorphism</a></li>
+          </ul>
+        </div>
+      </div>
+	  <div>
+        <span>+ Type Conversions</span>
+        <div class="collapse">
+          <ul>
+            <li><a href="#stringtodouble">- String to Double</a></li>
+            <li><a href="#stringtoint">- String to Int</a></li>
+	        <li><a href="#doubletoint">- Double to Int</a></li>
+	        <li><a href="#inttostring">- Int to String</a></li>
+			<li><a href="#doubletostring">- Double to String</a></li>
+	        <li><a href="#booltostring">- Bool to String</a></li>
+          </ul>
+        </div>
+      </div>
       <div>
         <span>+ Other</span>
         <div class="collapse">
@@ -285,9 +309,9 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </span>
       </div>
 
-      <h3>v1.1 --- Last Edited: 31-07-2024</h3>
+      <h3>v1.2 --- Last Edited: 18-03-2025</h3>
       <p>Forgotten how to do something? Look it up in here!</p>
-      <br>
+      <br />
 	  
 	  <h3>Core Concepts</h3>
 	  <hr />
@@ -388,7 +412,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         </code></pre>
       </div>
 
-      <br>
+      <br />
 
       <a id="combinestrings"><h3>Combine strings and output to console</h3></a>
       <div class="code-section">
@@ -417,7 +441,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Your name is Bob Bobbington
         </b></code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="compstrings"><h3>Compare strings (if statements)</h3></a>
       <div class="code-section">
@@ -445,7 +469,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Sorry...
         </b></code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="compnums"><h3>Compare numbers (if statements)</h3></a>
       <div class="code-section">
@@ -475,7 +499,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       10 is less than 11
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="compcomplex"><h3>Complex Comparisons (if statements)</h3></a>
       <div class="code-section">
@@ -536,7 +560,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       intNumA is not equal to intNumB
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="switchstatements"><h3>Switch Statements</h3></a>
       <div class="code-section">
@@ -583,7 +607,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Pouring Tea
         </b></code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="maths"><h3>Simple Maths</h3></a>
       <div class="code-section">
@@ -618,7 +642,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Result: 0.75
         </b></code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="simplefunction"><h3>Simple functions</h3></a>
       <div class="code-section">
@@ -648,7 +672,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Total: 30
         </b></code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="forloop"><h3>For loop (counted loop)</h3></a>
 	  <p>A for loop repeats code in {}'s a specified amount of iterations.</p>
@@ -687,7 +711,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 	  <br />
 	  <p><b>i++;</b> This is what happens after each iteration of the loop.</p>
 	  <p>In this case (i++), we are incrementing i by 1 each time.</p>
-      <br>
+      <br />
 
       <a id="whileloop"><h3>While loop (uncounted loop)</h3></a>
 	  <p>A while loop repeats the code in {}'s whilst the condition in ()'s evaluates to true.</p>
@@ -712,7 +736,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       intNum = 14			
         </b></code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="array"><h3>How to declare/initialise an array</h3></a>
       <p><b>Declaring Arrays</b></p>
@@ -751,7 +775,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       double[] balance = new double[10];
       </code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="arrayvalues"><h3>Assigning Values to Array Elements</h3></a>
       <p>
@@ -781,7 +805,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       int [] marks = new int[5]  { 99,  98, 92, 97, 95};
       </code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="arrayaccess"><h3>Accessing Array Elements</h3></a>
       <p>
@@ -833,7 +857,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Element[9] = 109		
         </b></code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="consolechecknum"><h3>Simple number validation</h3></a>
       <div class="code-section">
@@ -877,7 +901,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       intNum is: 2
         </b></code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="trycatchblock"><h3>Try/Catch Block</h3></a>
       <div class="code-section">
@@ -895,7 +919,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
       <h3>Strings</h3>
       <hr />
@@ -914,7 +938,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Length (in characters) of strName: 4
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="stringupper"><h3>Make a string ALL UPPER CASE</h3></a>
       <div class="code-section">
@@ -929,7 +953,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       FRED
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="stringlower"><h3>Make a string all lower case</h3></a>
       <div class="code-section">
@@ -944,7 +968,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       fred
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="stringindex"><h3>Access individual characters by index</h3></a>
       <div class="code-section">
@@ -961,7 +985,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       r
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="stringstartswith"><h3>Check if a string begins with a given string</h3></a>
       <div class="code-section">
@@ -981,7 +1005,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Bus starts with Truck: False
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="stringcontains"><h3>Check if a string contains a given string</h3></a>
       <div class="code-section">
@@ -1004,7 +1028,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Trucker contains Bus: False
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="stringsub"><h3>Get a substring from a string</h3></a>
       <div class="code-section">
@@ -1031,7 +1055,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Dreamcast
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <h3>Console Input</h3>
 	  <hr />
@@ -1055,7 +1079,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Your name is Bob
         </b></code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="getint"><h3>Get an integer from the user</h3></a>
       <div class="code-section">
@@ -1070,7 +1094,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p>Copy and paste but change intSumA to be a more suitable variable name and change the question in the first line.</p>
-      <br>
+      <br />
 
       <a id="getdouble"><h3>Get a double from the user</h3></a>
       <div class="code-section">
@@ -1085,7 +1109,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p>Copy and paste but change dblNumA to be a more suitable variable name and change the question in the first line.</p>
-      <br>
+      <br />
 	  
 	  <a id="getspecific"><h3>Get a specific value from the user</h3></a>
       <div class="code-section">
@@ -1139,7 +1163,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p>This is a pattern you can change to suit your situation.</p>
-      <br>
+      <br />
 	  
 	  <h3>Validation</h3>
 	  <hr />
@@ -1167,7 +1191,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="validstringnum"><h3>If string is number</h3></a>
       <div class="code-section">
@@ -1192,7 +1216,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="validnuminrange"><h3>If number is in a range</h3></a>
       <div class="code-section">
@@ -1211,7 +1235,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="validstringsequal"><h3>If 2 strings are the same</h3></a>
       <div class="code-section">
@@ -1224,7 +1248,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <h3>Files</h3>
 	  <hr />
@@ -1241,7 +1265,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         Substitute <i>"amazing.txt"</i> with the string of your choice. Remember
         to have a proper filename extension!
       </p>
-      <br>
+      <br />
 
       <a id="filedelete"><h3>FILES: Delete</h3></a>
       <div class="code-section">
@@ -1269,7 +1293,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       
       </code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="filewrite"><h3>FILES: Write</h3></a>
       <div class="code-section">
@@ -1298,7 +1322,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="fileread"><h3>FILES: Read</h3></a>
       <div class="code-section">
@@ -1357,7 +1381,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="fileappend"><h3>FILES: Append</h3></a>
       <div class="code-section">
@@ -1398,7 +1422,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <h3>Maths</h3>
 	  <hr />
@@ -1428,7 +1452,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
           3.142
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="mathspower"><h3>Maths: Power</h3></a>
       <div class="code-section">
@@ -1447,7 +1471,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       3^2 = 9
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="mathssqrt"><h3>Maths: Square Root</h3></a>
       <div class="code-section">
@@ -1468,7 +1492,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Square Root of 9: 3
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="mathsmaxmin"><h3>Maths: Max/Min</h3></a>
       <div class="code-section">
@@ -1495,7 +1519,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Min: -256
         </b></code></pre>
       </div>
-      <br>
+      <br />
 
       <h3>Random</h3>
 	  <hr />
@@ -1517,7 +1541,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Console.WriteLine(randGen.Next(intMin, intMax));
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="randomcointoss"><h3>Random: Coin Toss</h3></a>
       <div class="code-section">
@@ -1548,7 +1572,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="randomdice"><h3>Random: Roll x-sided Dice</h3></a>
       <div class="code-section">
@@ -1562,7 +1586,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="randompercent"><h3>Random: % Success Chance</h3></a>
       <div class="code-section">
@@ -1593,7 +1617,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <h3>GUI Textbox Input</h3>
 	  <hr />
@@ -1610,7 +1634,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         strName will be whatever the use has typed into txtName. For this exact
         code to work you need to have put in a textbox called txtName.
       </p>
-      <br>
+      <br />
 
       <a id="guigetint"><h3>GUI: Get an integer from a textbox</h3></a>
       <div class="code-section">
@@ -1626,7 +1650,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         Note that we use txtBaseHP, a textbox, you will need to change this to
         suit your code.
       </p>
-      <br>
+      <br />
 
       <a id="guigetdbl"><h3>GUI: Get a double from a textbox</h3></a>
       <div class="code-section">
@@ -1642,7 +1666,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         that we use txtInput, a textbox, you will need to change this to suit
         your code.
       </p>
-      <br>
+      <br />
 	  
 	  <a id="guigetintvalid"><h3>GUI: Get and validate a number</h3></a>
       <div class="code-section">
@@ -1672,7 +1696,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <b>Output if not a number or outside 1-100: </b>Must be an integer
         between 1-100
       </p>
-      <br>
+      <br />
 
       <a id="guigetstrvalid"><h3>GUI: Get and validate a string</h3></a>
       <div class="code-section">
@@ -1700,7 +1724,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <p>
         <b>Output if nothing was entered in the textbox: </b>Please enter a name
       </p>
-      <br>
+      <br />
 	  
 	  <h3>GUI (WPF)</h3>
 	  <hr />
@@ -1714,7 +1738,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p><b>Output on label: </b>Your name is Bob</p>
-      <br>
+      <br />
 	  
 	  <a id="guicheckbox"><h3>GUI: Checkbox</h3></a>
       <p>
@@ -1742,7 +1766,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p>The .IsChecked property is a boolean variable.</p>
-      <br>
+      <br />
 
       <a id="guiradiobuttons"><h3>GUI: Radio Buttons</h3></a>
       <p>
@@ -1771,7 +1795,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p>The .IsChecked property is a boolean variable.</p>
-      <br>
+      <br />
 
       <a id="guiinitcombobox"><h3>GUI: Intialise Dropdown/Combobox</h3></a>
       <div class="code-section">
@@ -1795,7 +1819,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <b>Output: </b>Combobox will display "Option 1", it will have "Option 2"
         when clicked on to make the list
       </p>
-      <br>
+      <br />
 
       <a id="guiusecombobox"><h3>GUI: Use Dropdown/Combobox</h3></a>
       <div class="code-section">
@@ -1807,7 +1831,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p><b>Output if Option 1 selected: </b>You chose: Option 1</p>
-      <br>
+      <br />
 	  
 	  <a id="guiusecomboboxindex"><h3>GUI: Use Dropdown/Combobox (Index Method)</h3></a>
       <div class="code-section">
@@ -1828,7 +1852,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       </code></pre>
       </div>
       <p>You can imagine a combobox as an array. The first (top) item is index 0.</p>
-      <br>
+      <br />
 	  
 	  <a id="guisetupslider"><h3>GUI: Setup Slider</h3></a>
 	  <p>Here is a full example of a function to configure a slider and how to use it. You will need to make a WPF slider and a Textbox, I used the names "sliGeneric" and "txtSlider" respectively.</p>
@@ -1918,7 +1942,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="guiopenfiledialog"><h3>GUI: Open File Dialog</h3></a>
       <div class="code-section">
@@ -1950,7 +1974,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="guisavefiledialog"><h3>GUI: Save File Dialog</h3></a>
       <div class="code-section">
@@ -1983,7 +2007,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 
       <a id="guibasicmsgbox"><h3>GUI: Basic Popup</h3></a>
       <div class="code-section">
@@ -1996,7 +2020,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="guierrorpopup"><h3>GUI: Error Popup</h3></a>
       <div class="code-section">
@@ -2009,7 +2033,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="guiyesnomsgbox"><h3>GUI: Yes/No Popup</h3></a>
       <div class="code-section">
@@ -2036,7 +2060,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="guishowimage"><h3>GUI: Show an Image</h3></a>
       <div class="code-section">
@@ -2055,7 +2079,219 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
+	  
+	  <h3>Object Oriented Programming Concepts</h3>
+	  <hr />
+	  <br />
+	  
+	  <a id="oopconcepts"><h3>OOP Concepts</h3></a>
+         <p>Classes and Objects: Classes are blueprints for creating objects. An object is an instance of a class.</p>
+	     <p>Inheritance: A class can inherit from another class, gaining its properties and methods</p>
+	     <p>Encapsulation: Bundling data and methods that operate on the data within one unit (class), and restricting access to some of the object's components.</p>
+	     <p>Polymorphism: The ability to present the same interface for different underlying forms (data types).</p>
+      <br />
+	  
+	  <a id="oopbaseclass"><h3>Defining a Base Class</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      public abstract class Item
+      {
+         // Properties for the name and weight of the item
+         public string Name { get; set; }
+         public int Weight { get; set; }
+
+         // Constructor to initialize the name and weight
+         public Item(string name, int weight)
+         {
+            Name = name;
+            Weight = weight;
+         }
+
+         // Abstract method that must be implemented by derived classes
+         public abstract void Use();
+      }
+      </code></pre>
+      </div>
+      <br />
+	  
+	  <a id="oopinheriting"><h3>Inheriting from a Class</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      // notice the : to inherit
+      // ChildClass : ParentClass
+	  // Weapon and Amour will inherit Name and Weight, and will need to implement Use()
+      public class Weapon : Item
+      {
+         // Property for the damage of the weapon
+         public int Damage { get; set; }
+
+         // Notice the inheritance of the base constructor (:)
+         // Constructor to initialize the name, weight, and damage
+         public Weapon(string name, int weight, int damage) : base(name, weight)
+         {
+            Damage = damage;
+         }
+
+         // Implementation of the abstract Use method
+         public override void Use()
+         {
+            Console.WriteLine($"{Name} is used to deal {Damage} damage.");
+         }
+      }
+
+      public class Armour : Item
+      {
+         // Property for the defense of the armour
+         public int Defense { get; set; }
+
+         // Notice the inheritance of the base constructor (:)
+         // Constructor to initialize the name, weight, and defense
+         public Armour(string name, int weight, int defense) : base(name, weight)
+         {
+            Defense = defense;
+         }
+
+         // Implementation of the abstract Use method
+         public override void Use()
+         {
+            Console.WriteLine($"{Name} is used to provide {Defense} defense.");
+         }
+      }
+      </code></pre>
+      </div>
+      <br />
+	  
+	  <a id="oopencapsulationpoly"><h3>Encapsulation and Polymorphism</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      class Program
+      {
+         static void Main(string[] args)
+         {
+            // Encapsulation: Creating instances of Weapon and Armour
+            Item sword = new Weapon("Sword", 5, 50);
+            Item shield = new Armour("Shield", 10, 40);
+
+            // Polymorphism: Using the Use method on different types of items
+            sword.Use();  // Output: Sword is used to deal 50 damage.
+            shield.Use(); // Output: Shield is used to provide 40 defense.
+         }
+      }
+      </code></pre>
+      </div>
+	  <p>Encapsulation: The Item, Weapon, and Armour classes encapsulate their properties and methods, bundling them together and restricting access to the internal state.</p>
+	  <p>Polymorphism: The Use method demonstrates polymorphism, allowing different types of items (Weapon and Armour) to be used interchangeably while providing specific behavior for each type.</p>
+      <br />
+	  
+	  <h3>Type Conversions</h3>
+	  <hr />
+	  <br />
+	  
+	  <a id="stringtodouble"><h3>String to Double</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      string strDouble = "123.45";
+      double resultDouble;
+
+      // Try to convert the string to a double
+      if (double.TryParse(strDouble, out resultDouble))
+      {
+         // Conversion successful
+         Console.WriteLine($"String to double: {resultDouble}");
+      }
+      else
+      {
+         // Conversion failed
+         Console.WriteLine("Invalid input for double conversion.");
+      }
+      </code></pre>
+      </div>
+	  <br />
+	  
+	  <a id="stringtoint"><h3>String to Int</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      string strInt = "456";
+      int resultInt;
+
+      // Try to convert the string to an int
+      if (int.TryParse(strInt, out resultInt))
+      {
+         // Conversion successful
+         Console.WriteLine($"String to int: {resultInt}");
+      }
+      else
+      {
+         // Conversion failed
+         Console.WriteLine("Invalid input for int conversion.");
+      }
+	  
+      // double to int is extremely similar, just use double instead of int
+      </code></pre>
+      </div>
+	  <br />
+	  
+	  <a id="doubletoint"><h3>Double to Int</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      double doubleValue = 123.45;
+      int intValue;
+
+      // Convert the double to an int (note: this will truncate the decimal part)
+      intValue = (int)doubleValue;
+      Console.WriteLine($"Double to int: {intValue}");
+      </code></pre>
+      </div>
+	  <br />
+	  
+	  <a id="inttostring"><h3>Int to String</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      int intValue = 123;
+      string strValue;
+
+      // Convert the int to a string
+      strValue = intValue.ToString();
+      Console.WriteLine($"Int to string: {strValue}");
+      </code></pre>
+      </div>
+	  <br />
+	  
+	  <a id="doubletostring"><h3>Double to String</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      double doubleValue = 123.45;
+      string strValue;
+
+      // Convert the double to a string
+      strValue = doubleValue.ToString();
+      Console.WriteLine($"Double to string: {strValue}");
+      </code></pre>
+      </div>
+	  <br />
+	  
+	  <a id="booltostring"><h3>Bool to String</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      bool boolValue = true;
+      string strValue;
+
+      // Convert the bool to a string
+      strValue = boolValue.ToString();
+      Console.WriteLine($"Bool to string: {strValue}");
+      </code></pre>
+      </div>
+	  <br />
 	  
 	  <h3>Other</h3>
 	  <hr />
@@ -2090,7 +2326,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       */
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="menuexample"><h3>An example console menu</h3></a>
       <div class="code-section">
@@ -2132,7 +2368,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="datetostring"><h3>Date To String (Timestamps)</h3></a>
       <div class="code-section">
@@ -2150,7 +2386,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       12/03/2019 9:43:22 AM
         </b></code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="consolecolours"><h3>Console Colours</h3></a>
       <div class="code-section">
@@ -2175,7 +2411,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       Console.WriteLine("Back to standard console colours");
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
 	  <a id="consolenostatic"><h3>Console Projects Anti-Static Trick</h3></a>
       <div class="code-section">
@@ -2194,7 +2430,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       }
       </code></pre>
       </div>
-      <br>
+      <br />
 	  
     </div>
 	<script>
