@@ -5,6 +5,9 @@ Resource full of examples of basic C# things. Raise an issue if you want anythin
 
 **ChangeLog**
 
+**v1.2a**
+- Fixed link to TeacherPhilD github
+
 **v1.2**
 - Added section for Object Oriented Programming
 - Added section for Type Conversions
