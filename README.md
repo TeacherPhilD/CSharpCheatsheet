@@ -6,6 +6,9 @@ Resource full of examples of basic C# things. Raise an issue if you want anythin
 **ChangeLog**
 
 **v1.2a**
+- Fixed slight error in Anti-Static Trick
+
+**v1.2a**
 - Fixed link to TeacherPhilD github
 
 **v1.2**
