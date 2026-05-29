@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>C# Cheat Sheet v1.2b</title>
+    <title>C# Cheat Sheet v1.3</title>
     <style>
 
 :root {
@@ -264,6 +264,7 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
         <span>+ OOP</span>
         <div class="collapse">
           <ul>
+            <li><a href="#oopbasicclass">- Basic Class with Constructor</a></li>
             <li><a href="#oopconcepts">- OOP Concepts</a></li>
             <li><a href="#oopbaseclass">- Defining a Base Class</a></li>
 	        <li><a href="#oopinheriting">- Inheriting from a Class</a></li>
@@ -303,13 +304,11 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
       <div class="heading">
         <h2>C# Cheat Sheet</h2>
         <span>
-          Made by <a href="https://github.com/TeacherPhilD" target="_blank">Teacher Phil</a> / some
-          code magic by
-          <a href="https://github.com/bot19" target="_blank">JSbot</a>.
+          Made by <a href="https://github.com/TeacherPhilD" target="_blank">Teacher Phil</a> / some code magic by <a href="https://github.com/bot19" target="_blank">JSbot</a>.
         </span>
       </div>
 
-      <h3>v1.2b --- Last Edited: 26-05-2025</h3>
+      <h3>v1.3 --- Last Edited: 29-05-2026</h3>
       <p>Forgotten how to do something? Look it up in here!</p>
       <br />
 	  
@@ -2090,6 +2089,45 @@ pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5p
 	     <p>Inheritance: A class can inherit from another class, gaining its properties and methods</p>
 	     <p>Encapsulation: Bundling data and methods that operate on the data within one unit (class), and restricting access to some of the object's components.</p>
 	     <p>Polymorphism: The ability to present the same interface for different underlying forms (data types).</p>
+      <br />
+	  
+	  <a id="oopbasicclass"><h3>Basic Class with Constructor</h3></a>
+      <div class="code-section">
+        <button class="copy-button">Copy</button>
+        <pre><code>
+      // To use in other parts of project:
+      // ComputerMonitor cmMyMonitor = new ComputerMonitor("BenQ", "RD280UG", 3840, 2160)
+      // You could then use any public methods in this Class
+      // For instance:
+      // Console.WriteLine(cmMyMonitor.GetDescription());
+      public class ComputerMonitor
+      {
+         // Properties for a Computer Monitor
+         public string strBrand;
+         public string strModel;
+         public int intVerticalResolution;
+         public int intHorizontalResolution;
+
+         // Constructor to initialize the Make, Model
+         // Horizontal and Vertical Resolution
+         public ComputerMonitor(string strBrandA, string strModelA, int intVerticalResolutionA, int intHorizontalResolutionA)
+         {
+            // Incoming variables (with A appended) need to be wired to
+            // the class variables (properties)
+            strBrand = strBrandA;
+            strModel = strModelA;
+			intVerticalResolution = intVerticalResolutionA;
+			intHorizontalResolution = intHorizontalResolutionA;
+         }
+
+         // Method to display full name of monitor and description
+         public string GetDescription()
+         {
+            return $"{strBrand} {strModel}\n{intVerticalResolution}x{intHorizontalResolution}";
+         }
+      }
+      </code></pre>
+      </div>
       <br />
 	  
 	  <a id="oopbaseclass"><h3>Defining a Base Class</h3></a>
