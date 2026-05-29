@@ -5,6 +5,9 @@ Resource full of examples of basic C# things. Raise an issue if you want anythin
 
 **ChangeLog**
 
+**v1.3**
+- Added Basic Class with Constructor example
+
 **v1.2a**
 - Fixed slight error in Anti-Static Trick
 
